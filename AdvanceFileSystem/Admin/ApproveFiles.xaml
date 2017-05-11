@@ -1,0 +1,36 @@
+﻿<Controls:MetroWindow x:Class="AdvanceFileSystem.Admin.ApproveFiles"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:AdvanceFileSystem.Admin"
+        mc:Ignorable="d"
+        Title="ApproveFiles" Height="550" Width="700" Background="#FF2C3E50">
+    <Grid>
+        <DataGrid x:Name="dataGrid" Margin="10" Background="#FF2980B9" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" ClipboardContentBinding="{x:Null}" Header="File Num" HeaderStringFormat="File Num"/>
+                <DataGridTextColumn Binding="{Binding Name}" ClipboardContentBinding="{x:Null}" Header="File Name" HeaderStringFormat="File Name"/>
+                <DataGridTextColumn Binding="{Binding Category.Name}" ClipboardContentBinding="{x:Null}" Header="File Type" HeaderStringFormat="File Type"/>
+                <DataGridTextColumn Binding="{Binding AddedTime}" ClipboardContentBinding="{x:Null}" Header="Added Time" HeaderStringFormat="Added Time"/>
+                <DataGridTextColumn Binding="{Binding User.Name}" ClipboardContentBinding="{x:Null}" Header="User" HeaderStringFormat="User"/>
+                <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="Details" HeaderStringFormat="Details">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button>Details</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="Approve" HeaderStringFormat="Approve">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Background="#2E8B57">Approve</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Controls:MetroWindow>

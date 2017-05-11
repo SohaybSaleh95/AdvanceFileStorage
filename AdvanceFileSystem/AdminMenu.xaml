@@ -1,0 +1,46 @@
+﻿<Controls:MetroWindow x:Class="AdvanceFileSystem.AdminMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:AdvanceFileSystem"
+        mc:Ignorable="d"
+        Title="AdminMenu" Height="550" Width="550" Background="#FF2C3E50">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="64*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="SideBar" HorizontalAlignment="Left" Width="26" Background="#FF2980B9" MouseEnter="SideBar_MouseEnter" MouseLeave="SideBar_MouseLeave">
+            <Image x:Name="EmpImage" HorizontalAlignment="Left" Height="26" Margin="0,10,0,0" VerticalAlignment="Top" Width="26">
+                <Image.Source>
+                    <BitmapImage UriSource="/images/Contacts-64.png" />
+                </Image.Source>
+            </Image>
+            <Label x:Name="EmpName" Content="EmpName" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="124" Foreground="#FFECF0F1"/>
+            <Grid HorizontalAlignment="Left" Height="226" Margin="0,75,0,0" VerticalAlignment="Top" Width="150">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="44"/>
+                    <RowDefinition Height="44"/>
+                    <RowDefinition Height="44"/>
+                    <RowDefinition Height="44"/>
+                </Grid.RowDefinitions>
+                <Grid x:Name="Files" HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="150" Grid.Row="1" Margin="0,1,0,0" MouseEnter="SideBar_Button_MouseEnter" MouseLeave="SideBar_Button_MouseLeave" Cursor="Hand" MouseLeftButtonUp="Files_MouseLeftButtonUp">
+                    <Image x:Name="image_Copy2" HorizontalAlignment="Left" Height="24" Margin="0,10,0,0" VerticalAlignment="Top" Width="24" Source="/images/File-50.png"/>
+                    <Label x:Name="label_Copy" Content="Files" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="126" Foreground="#FFECF0F1" Height="24"/>
+                </Grid>
+                <Grid x:Name="Log" HorizontalAlignment="Left" Height="44" Margin="0,1,0,0" VerticalAlignment="Top" Width="150" Grid.Row="2" MouseEnter="SideBar_Button_MouseEnter" MouseLeave="SideBar_Button_MouseLeave" Cursor="Hand" MouseLeftButtonUp="Log_MouseLeftButtonUp">
+                    <Image x:Name="log_image" HorizontalAlignment="Left" Height="24" Margin="0,10,0,0" VerticalAlignment="Top" Width="24" Source="/images/Clock-64.png"/>
+                    <Label x:Name="label_Copy1" Content="Log" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="126" Foreground="#FFECF0F1" Height="24"/>
+                </Grid>
+                <Grid x:Name="Employees" HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="150" MouseEnter="SideBar_Button_MouseEnter" MouseLeave="SideBar_Button_MouseLeave" Cursor="Hand" MouseLeftButtonUp="Employees_MouseLeftButtonUp">
+                    <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="24" Margin="0,10,0,0" VerticalAlignment="Top" Width="24" Source="images/Employee.png"/>
+                    <Label x:Name="label_Copy2" Content="Employees" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="126" Foreground="#FFECF0F1" Height="24"/>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid x:Name="Body" Grid.Column="1" Margin="10"/>
+
+    </Grid>
+</Controls:MetroWindow>

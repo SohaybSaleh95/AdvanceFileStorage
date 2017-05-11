@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="AdvanceFileSystem.Admin.FilesMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AdvanceFileSystem.Admin"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="364" Height="291" Background="#FF2980B9">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="145*"/>
+            <RowDefinition Height="146*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="approve_files_Button" Content="Approve Files" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="50" Background="#FF336699" Foreground="#FFECF0F1" Click="approve_files_Button_Click"/>
+        <Button x:Name="file_category_Button" Content="File Categories" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="50" Background="#FF336699" Foreground="#FFECF0F1" Grid.Row="1" Grid.ColumnSpan="2" Click="file_category_Button_Click"/>
+        <Button x:Name="file_permission_Button" Content="Files Permissions" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="50" Background="#FF336699" Foreground="#FFECF0F1" Grid.Column="1"/>
+
+    </Grid>
+</UserControl>

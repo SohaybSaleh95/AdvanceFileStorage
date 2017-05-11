@@ -1,0 +1,47 @@
+﻿<Controls:MetroWindow x:Class="AdvanceFileSystem.AddFile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:AdvanceFileSystem"
+        mc:Ignorable="d"
+        Title="AddFile" Height="550" Width="550" Background="#FF2C3E50">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="219*"/>
+            <RowDefinition Height="72*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="275"/>
+            <ColumnDefinition Width="275"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" Content="Add File" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" FontSize="24" Width="136" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FFECF0F1" Margin="207,4" Height="42"/>
+        <TextBox x:Name="file_name_TxtBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="173"/>
+        <Label x:Name="label1" Content="File Name" Margin="10,10,10,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.182,0.654" HorizontalContentAlignment="Right" Height="25" Foreground="#FFECF0F1"/>
+        <Button x:Name="add_Button" Content="Save&#xD;&#xA;Information" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Top" Width="100" Height="50" Background="SeaGreen" BorderBrush="MediumSeaGreen" Foreground="#FFECF0F1" Margin="165,10,10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="clear_Button" Content="Clear" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Top" Width="100" Height="50" Background="#FFE74C3C" BorderBrush="#FFF57A6D" Foreground="#FFECF0F1" Margin="10,10,165,0" Grid.Column="1"/>
+        <Label x:Name="label1_Copy" Content="File Describtion" Margin="10,33,10,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.182,0.654" HorizontalContentAlignment="Right" Height="25" Foreground="#FFECF0F1"/>
+        <TextBox x:Name="file_desc_TxtBox" Grid.Column="1" HorizontalAlignment="Left" Height="70" Margin="10,10,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="247"/>
+        <Label x:Name="label1_Copy1" Content="Category" Margin="10,10,10,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.182,0.654" HorizontalContentAlignment="Right" Height="25" Foreground="#FFECF0F1"/>
+        <ComboBox x:Name="file_Category_ComboBox" Grid.Column="1" Margin="10,10,92,0" Grid.Row="3" VerticalAlignment="Top" Height="26"/>
+        <Grid Margin="0,10,8,10" Grid.Row="4" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="261*"/>
+                <ColumnDefinition Width="261*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="label1_Copy2" Content="Participants" VerticalAlignment="Top" RenderTransformOrigin="0.182,0.654" HorizontalContentAlignment="Left" Height="25" Foreground="#FFECF0F1" Background="#FF3498DB" Grid.ColumnSpan="2"/>
+            <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Height="159" Width="251" ColumnWidth="*">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Citizen Id" HeaderStringFormat="Citizen Id"/>
+                    <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Role" HeaderStringFormat="Role"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+    </Grid>
+</Controls:MetroWindow>
