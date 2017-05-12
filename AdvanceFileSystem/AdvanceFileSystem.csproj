@@ -38,6 +38,10 @@
       <HintPath>..\packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -178,6 +182,7 @@
     <Compile Include="classes\LoginLog.cs" />
     <Compile Include="classes\RequestLog.cs" />
     <Compile Include="classes\User.cs" />
+    <Compile Include="Connection.cs" />
     <Compile Include="Emp\CitizenMenu.xaml.cs">
       <DependentUpon>CitizenMenu.xaml</DependentUpon>
     </Compile>
@@ -193,6 +198,8 @@
     <Compile Include="Emp\FilesMenu.xaml.cs">
       <DependentUpon>FilesMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Extra\Encrypt.cs" />
+    <Compile Include="Extra\Errors.cs" />
     <Compile Include="FilesSearch.xaml.cs">
       <DependentUpon>FilesSearch.xaml</DependentUpon>
     </Compile>

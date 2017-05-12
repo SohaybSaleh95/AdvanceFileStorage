@@ -51,3 +51,5 @@ C:\Users\Dark_\OneDrive\Documents\Visual Studio 2015\Projects\AdvanceFileSystem\
 C:\Users\Dark_\OneDrive\Documents\Visual Studio 2015\Projects\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\LogMenu.baml
 C:\Users\Dark_\OneDrive\Documents\Visual Studio 2015\Projects\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\RequestLog.g.cs
 C:\Users\Dark_\OneDrive\Documents\Visual Studio 2015\Projects\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\RequestLog.baml
+C:\Users\Dark_\OneDrive\Documents\Visual Studio 2015\Projects\AdvanceFileSystem\AdvanceFileSystem\bin\Debug\MySql.Data.dll
+C:\Users\Dark_\OneDrive\Documents\Visual Studio 2015\Projects\AdvanceFileSystem\AdvanceFileSystem\bin\Debug\MySql.Data.xml
