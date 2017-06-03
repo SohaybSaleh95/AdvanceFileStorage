@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-05-12 10:34:02
+Date: 2017-06-03 23:09:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -114,7 +114,8 @@ CREATE TABLE `files` (
   `file_name` varchar(255) NOT NULL,
   `category_id` int(10) unsigned NOT NULL,
   `position_id` int(10) unsigned NOT NULL,
-  `permission` int(11) NOT NULL DEFAULT '0',
+  `see_permission` tinyint(3) unsigned NOT NULL DEFAULT '101',
+  `edit_permission` tinyint(3) unsigned DEFAULT '101',
   `state` tinyint(1) NOT NULL,
   `desc` varchar(255) NOT NULL DEFAULT 'There is no Description Avalaible',
   `user_id` int(10) unsigned NOT NULL,
@@ -216,7 +217,7 @@ CREATE TABLE `users` (
   `password` varchar(40) CHARACTER SET ascii NOT NULL,
   `email` varchar(100) NOT NULL,
   `admin` char(1) NOT NULL DEFAULT '0',
-  `permission` int(11) NOT NULL DEFAULT '0',
+  `permission` smallint(6) NOT NULL DEFAULT '0',
   `card_id` varchar(9) NOT NULL,
   `birthdate` date NOT NULL,
   `address_id` int(10) unsigned NOT NULL,
@@ -224,8 +225,12 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `uni` (`card_id`),
   KEY `users_address` (`address_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
+INSERT INTO `users` VALUES ('1', 'SohaybSaleh', 'e10adc3949ba59abbe56e057f20f883e', 'sohaybsaleh95@gmail.com', '0', '100', '111111111', '1995-12-18', '1', '1');
+INSERT INTO `users` VALUES ('2', 'AyaJabir', 'e10adc3949ba59abbe56e057f20f883e', 'sohaybsaleh95@gmail.com', '0', '100', '222222222', '1995-12-18', '1', '1');
+INSERT INTO `users` VALUES ('3', 'RaghadNoman', 'e10adc3949ba59abbe56e057f20f883e', 'sohaybsaleh95@gmail.com', '0', '100', '333333333', '1995-12-18', '1', '1');
+INSERT INTO `users` VALUES ('4', 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'sohaybsaleh95@gmail.com', '1', '100', '444444444', '1995-12-18', '1', '1');

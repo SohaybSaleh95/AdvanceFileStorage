@@ -67,7 +67,26 @@ namespace AdvanceFileSystem
                     //عشان نشوف اذا موجود ولا لا ناخذ خاصية HasRows
                     if (_Reader.HasRows) //اذا تحقق الشرط معناها انه فعلا موجود سطر بهاي المعلومات
                     {
-                        this.ShowMessageAsync("Success", "Login Successfull");
+
+                        //بيقرا اول سطر موجود
+                        _Reader.Read();
+
+                        //بياخذ السطر يلي قراه فوق عمود يلي اسمه
+                        //admin
+                        //عاساس نقارن فيه اذا 1 معناها هو ادمن اذا 0 موظف عادي
+
+                        string admin = _Reader["admin"].ToString();
+                        _Reader.Close();
+                        if(admin == "1")
+                        {
+                            this.Hide();
+                            new AdminMenu(username,this).Show();
+                        }
+                        else
+                        {
+                            this.Hide();
+                            new EmpMenu(username,this).Show();
+                        }
                     }
                     else
                     {
