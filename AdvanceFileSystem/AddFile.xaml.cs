@@ -24,13 +24,5 @@ namespace AdvanceFileSystem
         {
             InitializeComponent();
         }
-
-        public AddFile(classes.File File)
-        {
-            InitializeComponent();
-            file_name_TxtBox.Text = File.Name;
-            file_desc_TxtBox.Text = File.Desc;
-            file_Category_ComboBox.Text = File.Category.Name;
-        }
     }
 }

@@ -23,23 +23,6 @@ namespace AdvanceFileSystem
         public FilesSearch()
         {
             InitializeComponent();
-            this.dataGrid.Items.Add(new classes.File()
-            {
-                Id = 100,
-                Name = "Murder",
-                Desc = "Someone Murdered Someone",
-                Category = new classes.Category()
-                {
-                    Id = 5,
-                    Name = "Murder Files"
-                }
-            });
-        }
-
-        private void Edit_Button_Click(object sender, RoutedEventArgs e)
-        {
-            classes.File F = (classes.File)this.dataGrid.SelectedItem;
-            new AddFile(F).ShowDialog();
         }
     }
 }

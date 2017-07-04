@@ -23,32 +23,6 @@ namespace AdvanceFileSystem.Admin
         public RequestLog()
         {
             InitializeComponent();
-            this.dataGrid.Items.Add(new classes.RequestLog()
-            {
-                EmpName = "SohaybSaleh",
-                FileId = 100,
-                FileName = "Murder",
-                RequestTime = "02-05-2017 8:15 am",
-                RequestType = "Get"
-            });
-
-            this.dataGrid.Items.Add(new classes.RequestLog()
-            {
-                EmpName = "SohaybSaleh",
-                FileId = 100,
-                FileName = "Murder",
-                RequestTime = "02-05-2017 8:15 am",
-                RequestType = "Get"
-            });
-
-            this.dataGrid.Items.Add(new classes.RequestLog()
-            {
-                EmpName = "SohaybSaleh",
-                FileId = 100,
-                FileName = "Murder",
-                RequestTime = "02-05-2017 8:15 am",
-                RequestType = "Get"
-            });
         }
     }
 }

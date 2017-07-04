@@ -40,14 +40,14 @@
                 <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="Edit" HeaderStringFormat="Edit">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Click="Edit_Button_Click">Edit</Button>
+                            <Button>Edit</Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="Active" HeaderStringFormat="Active">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Click="Active_Button_Click">Active</Button>
+                            <Button>Active</Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

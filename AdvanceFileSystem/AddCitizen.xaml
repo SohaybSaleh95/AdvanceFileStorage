@@ -36,7 +36,7 @@
         <DatePicker x:Name="birthdate_DatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Height="25" Width="167" DisplayDate="1980-01-01"/>
         <ComboBox x:Name="address_ComboBox" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="167" Height="25"/>
         <Button x:Name="add_Button" Content="Save&#xD;&#xA;Information" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Top" Width="100" Height="50" Background="SeaGreen" BorderBrush="MediumSeaGreen" Foreground="#FFECF0F1" Margin="88,40,87,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button x:Name="clear_Button" Content="Clear" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Top" Width="100" Height="50" Background="#FFE74C3C" BorderBrush="#FFF57A6D" Foreground="#FFECF0F1" Margin="83,40,92,0" Grid.Column="1" Click="clear_Button_Click"/>
+        <Button x:Name="clear_Button" Content="Clear" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Top" Width="100" Height="50" Background="#FFE74C3C" BorderBrush="#FFF57A6D" Foreground="#FFECF0F1" Margin="83,40,92,0" Grid.Column="1"/>
 
     </Grid>
 </Controls:MetroWindow>

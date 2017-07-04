@@ -24,13 +24,5 @@ namespace AdvanceFileSystem.Admin
         {
             InitializeComponent();
         }
-        
-        public AddEmployee(classes.Employee Emp)
-        {
-            InitializeComponent();
-            username_TxtBox.Text = Emp.Name;
-            card_id_TxtBox.Text = Emp.CardId.ToString();
-            perission_TxtBox.Text = Emp.Permission.ToString();
-        }
     }
 }

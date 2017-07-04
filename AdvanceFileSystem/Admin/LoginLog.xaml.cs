@@ -23,38 +23,6 @@ namespace AdvanceFileSystem.Admin
         public LoginLog()
         {
             InitializeComponent();
-            this.dataGrid.Items.Add(new classes.LoginLog()
-            {
-                Username = "Abdallah",
-                LoginTime = "1-5-2017",
-                LogoutTime = "1-5-2017"
-            });
-            this.dataGrid.Items.Add(new classes.LoginLog()
-            {
-                Username = "Ahmad",
-                LoginTime = "1-5-2017",
-                LogoutTime = "1-5-2017"
-            });
-            this.dataGrid.Items.Add(new classes.LoginLog()
-            {
-                Username = "Aya",
-                LoginTime = "1-5-2017",
-                LogoutTime = "1-5-2017"
-            });
-
-            this.dataGrid.Items.Add(new classes.LoginLog()
-            {
-                Username = "Raghad",
-                LoginTime = "1-5-2017",
-                LogoutTime = "1-5-2017"
-            });
-
-            this.dataGrid.Items.Add(new classes.LoginLog()
-            {
-                Username = "Sohayb",
-                LoginTime = "1-5-2017",
-                LogoutTime = "1-5-2017"
-            });
         }
     }
 }

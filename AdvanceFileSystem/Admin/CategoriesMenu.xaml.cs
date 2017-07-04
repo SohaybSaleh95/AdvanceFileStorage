@@ -23,34 +23,6 @@ namespace AdvanceFileSystem.Admin
         public CategoriesMenu()
         {
             InitializeComponent();
-
-            this.dataGrid.Items.Add(new classes.Category()
-            {
-                Id = 1,
-                Name = "Murder Files"
-            });
-
-            this.dataGrid.Items.Add(new classes.Category()
-            {
-                Id = 2,
-                Name = "Murder Files"
-            });
-        }
-
-        private void button_Copy_Click(object sender, RoutedEventArgs e)
-        {
-            name_TxtBox.Clear();
-            dataGrid.SelectedIndex = -1;
-            add_Button.Content = "Add";
-        }
-
-        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (dataGrid.SelectedIndex != -1)
-            {
-                add_Button.Content = "Edit";
-                name_TxtBox.Text = ((classes.Category)dataGrid.SelectedItem).Name;
-            }
         }
     }
 }

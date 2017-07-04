@@ -23,15 +23,6 @@ namespace AdvanceFileSystem
         public CitizenSearch()
         {
             InitializeComponent();
-            this.dataGrid.Items.Add(new classes.Citizen() { CardId = "11111", FullName = "Sohayb Saleh", Address = "Jenin", Birthdate = "18-12-1995" });
-            this.dataGrid.Items.Add(new classes.Citizen() { CardId = "22222", FullName = "Sohayb Saleh", Address = "Jenin", Birthdate = "18-12-1995" });
-            this.dataGrid.Items.Add(new classes.Citizen() { CardId = "23333", FullName = "Sohayb Saleh", Address = "Jenin", Birthdate = "18-12-1995" });
-        }
-
-        private void Edit_Button_Click(object sender, RoutedEventArgs e)
-        {
-            classes.Citizen Citi = (classes.Citizen)dataGrid.SelectedItem;
-            new AddCitizen(Citi).ShowDialog();
         }
     }
 }

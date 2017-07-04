@@ -15,7 +15,7 @@
             <ColumnDefinition Width="33*"/>
             <ColumnDefinition Width="52*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dataGrid" Margin="10,10,10,11" ColumnWidth="*" SelectionChanged="dataGrid_SelectionChanged">
+        <DataGrid x:Name="dataGrid" Margin="10,10,10,11" ColumnWidth="*">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}" ClipboardContentBinding="{x:Null}" Header="Name" HeaderStringFormat="Name"/>
             </DataGrid.Columns>
@@ -23,6 +23,6 @@
         <TextBox x:Name="name_TxtBox" Grid.Column="1" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" Margin="70,0,70,145"/>
         <Label x:Name="label" Content="Name" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="46" Margin="107,0,107,176" Foreground="#FFECF0F1"/>
         <Button x:Name="add_Button" Content="Add" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="86" Height="46" Margin="10,0,164,68" Background="#FF3498DB" Foreground="#FFECF0F1"/>
-        <Button x:Name="clear_Button" Content="Clear" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="86" Height="46" Margin="164,0,10,68" Background="#FFE74C3C" Foreground="#FFECF0F1" BorderBrush="#FFE74C3C" Click="button_Copy_Click"/>
+        <Button x:Name="clear_Button" Content="Clear" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="86" Height="46" Margin="164,0,10,68" Background="#FFE74C3C" Foreground="#FFECF0F1" BorderBrush="#FFE74C3C"/>
     </Grid>
 </Controls:MetroWindow>

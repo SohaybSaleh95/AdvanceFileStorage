@@ -23,26 +23,6 @@ namespace AdvanceFileSystem.Admin
         public ApproveFiles()
         {
             InitializeComponent();
-
-            this.dataGrid.Items.Add(new classes.File()
-            {
-                Id = 5,
-                Name = "Murder",
-                AddedTime = "1-5-2017",
-                Category = new classes.Category() { Id = 1,Name = "Murder Files"},
-                User = new classes.User() { Id= 1,Name="Sohayb"},
-                Desc = "Welcome"
-            });
-
-            this.dataGrid.Items.Add(new classes.File()
-            {
-                Id = 6,
-                Name = "Murder",
-                AddedTime = "1-5-2017",
-                Category = new classes.Category() { Id = 1, Name = "Murder Files" },
-                User = new classes.User() { Id = 1, Name = "Sohayb" },
-                Desc = "Welcome"
-            });
         }
     }
 }

@@ -23,47 +23,6 @@ namespace AdvanceFileSystem.Admin
         public EmplyeesList()
         {
             InitializeComponent();
-            this.dataGrid.Items.Add(new classes.Employee()
-            {
-                CardId = 201311056,
-                Name = "Abdallah Samoudi",
-                Address = "Jenin"
-            });
-            this.dataGrid.Items.Add(new classes.Employee()
-            {
-                CardId = 201311056,
-                Name = "Ahmad Omaria",
-                Address = "Jenin"
-            });
-            this.dataGrid.Items.Add(new classes.Employee()
-            {
-                CardId = 201311056,
-                Name = "Aya Jabir",
-                Address = "Tulkarem"
-            });
-            this.dataGrid.Items.Add(new classes.Employee()
-            {
-                CardId = 201311056,
-                Name = "Raghad Numan",
-                Address = "Tulkarem"
-            });
-            this.dataGrid.Items.Add(new classes.Employee()
-            {
-                CardId = 201311056,
-                Name = "Sohayb Saleh",
-                Address = "Jenin"
-            });
-        }
-
-        private void Active_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Edit_Button_Click(object sender,RoutedEventArgs e)
-        {
-            classes.Employee Emp = (classes.Employee)dataGrid.SelectedItem;
-            new AddEmployee(Emp).ShowDialog();
         }
     }
 }

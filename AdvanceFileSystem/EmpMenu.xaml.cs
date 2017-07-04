@@ -28,7 +28,7 @@ namespace AdvanceFileSystem
         CitizenMenu CitizenPage;
         FilesMenu FilesPage;
 
-        public EmpMenu(string name)
+        public EmpMenu()
         {
             InitializeComponent();
             ShowSideBar = new DoubleAnimation();
@@ -51,42 +51,8 @@ namespace AdvanceFileSystem
             CitizenPage.Margin = new Thickness(10);
             FilesPage = new FilesMenu();
             FilesPage.Margin = new Thickness(10);
-            this.EmpName.Content = name;
         }
-
-        public EmpMenu(string name, MainWindow MW)
-        {
-            InitializeComponent();
-            this.MW = MW;
-            ShowSideBar = new DoubleAnimation();
-            HideSideBar = new DoubleAnimation();
-            ShowPage = new DoubleAnimation();
-
-            ShowSideBar.From = 26;
-            ShowSideBar.To = 150;
-            ShowSideBar.Duration = new Duration(TimeSpan.FromMilliseconds(500));
-
-            HideSideBar.From = 150;
-            HideSideBar.To = 26;
-            HideSideBar.Duration = new Duration(TimeSpan.FromMilliseconds(500));
-
-            ShowPage.From = 0;
-            ShowPage.To = 1;
-            ShowPage.Duration = new Duration(TimeSpan.FromMilliseconds(500));
-
-            CitizenPage = new CitizenMenu();
-            CitizenPage.Margin = new Thickness(10);
-            FilesPage = new FilesMenu();
-            FilesPage.Margin = new Thickness(10);
-            this.EmpName.Content = name;
-        }
-
-        protected override void OnClosed(EventArgs e)
-        {
-            MW.Show();
-            Close();
-        }
-
+        
         private void SideBar_MouseEnter(object sender, MouseEventArgs e)
         {
             SideBar.BeginAnimation(DataGrid.WidthProperty, ShowSideBar);

@@ -21,7 +21,6 @@ namespace AdvanceFileSystem
     /// </summary>
     public partial class AdminMenu : MetroWindow
     {
-        MainWindow MW;
 
         DoubleAnimation ShowSideBar, HideSideBar, ShowPage;
         Grid Active = null;
@@ -51,37 +50,7 @@ namespace AdvanceFileSystem
             EmployeesPage = new Admin.EmployeesMenu();
 
         }
-
-        public AdminMenu(string EmpName,MainWindow MW)
-        {
-            InitializeComponent();
-            this.MW = MW;
-            ShowSideBar = new DoubleAnimation();
-            HideSideBar = new DoubleAnimation();
-            //ShowPage = new DoubleAnimation();
-            this.EmpName.Content = EmpName;
-            ShowSideBar.From = 26;
-            ShowSideBar.To = 150;
-            ShowSideBar.Duration = new Duration(TimeSpan.FromMilliseconds(500));
-
-            HideSideBar.From = 150;
-            HideSideBar.To = 26;
-            HideSideBar.Duration = new Duration(TimeSpan.FromMilliseconds(500));
-
-            LogPage = new Admin.LogMenu();
-            LogPage.Margin = new Thickness(10);
-            FilesPage = new Admin.FilesMenu();
-            FilesPage.Margin = new Thickness(10);
-            EmployeesPage = new Admin.EmployeesMenu();
-
-        }
-
-        protected override void OnClosed(EventArgs e)
-        {
-            MW.Show();
-            Close();
-        }
-
+        
         private void SideBar_MouseEnter(object sender, MouseEventArgs e)
         {
             SideBar.BeginAnimation(DataGrid.WidthProperty, ShowSideBar);
