@@ -108,3 +108,6 @@ E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\MainWindow.ba
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.g.resources
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.Properties.Resources.resources
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.csproj.GenerateResource.Cache
+D:\AdvanceFileSystem\AdvanceFileSystem\bin\Debug\AdvanceFileSystem.exe.config
+D:\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.exe
+D:\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.pdb
