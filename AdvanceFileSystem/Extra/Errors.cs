@@ -10,5 +10,7 @@ namespace AdvanceFileSystem.Extra
     {
         public static String ConnectionError { get; } = "An error occured while connecting to the database";
         public static String FieldEmpty { get; } = "One or more fields are empty \n\r please fill all fields";
+        public static string Invalid { get; }="invaild information";
+
     }
 }

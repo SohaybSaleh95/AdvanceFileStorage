@@ -12,6 +12,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
+using AdvanceFileSystem.classes;
+
 
 namespace AdvanceFileSystem.Admin
 {
@@ -23,6 +26,19 @@ namespace AdvanceFileSystem.Admin
         public EmplyeesList()
         {
             InitializeComponent();
+            MySqlConnection conn = Connection.Connect();
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "select * FROM users";
+            MySqlDataReader Reader = cmd.ExecuteReader();
+            while (Reader.Read())
+            {
+                Employee emp = new Employee();
+                emp.Address = "";
+                emp.CardId = Reader.GetInt32("card_id");
+                emp.Name = Reader.GetString("username");
+                emp.Permission = Reader.GetInt32("permission");
+                emptable.Items.Add(emp);
+            }
         }
     }
 }

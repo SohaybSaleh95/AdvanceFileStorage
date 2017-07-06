@@ -8,14 +8,15 @@
         mc:Ignorable="d"
         Title="Employee Menu" Height="394.489" Width="542.06" Background="#FF2C3E50">
     <Grid>
-        <Grid x:Name="side_bar" HorizontalAlignment="Left" Width="122" Background="#FF04440A">
+        <Grid x:Name="side_bar" HorizontalAlignment="Left" Width="122" Background="#FF06744C" RenderTransformOrigin="0.459,0.514">
             <Image x:Name="image" Height="64" Margin="10,54,10,0" VerticalAlignment="Top"/>
             <Image x:Name="image1" Height="30" Margin="0,10,10,0" VerticalAlignment="Top" OpacityMask="White" Stretch="Fill" Source="images/Menu-64.png" MouseLeftButtonDown="image1_MouseLeftButtonDown" HorizontalAlignment="Right" Width="30"/>
             <Button x:Name="button" Content="Button" Click="button_Click" Margin="0,123,0,206"/>
             <Grid x:Name="emps" Height="1" Margin="0,156,0,0" VerticalAlignment="Top" Background="#FF43CB35" RenderTransformOrigin="0.5,0.5">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="62*"/>
+                    <ColumnDefinition Width="47*"/>
+                    <ColumnDefinition Width="14*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RenderTransform>
                     <TransformGroup>
@@ -26,6 +27,9 @@
                     </TransformGroup>
                 </Grid.RenderTransform>
             </Grid>
+            <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="0,162,0,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="-0.063,-0.13"/>
+            <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="0,189,0,0" VerticalAlignment="Top" Width="122"/>
+            <Grid HorizontalAlignment="Left" Height="105" Margin="0,216,0,0" VerticalAlignment="Top" Width="122"/>
         </Grid>
         <Grid x:Name="body" HorizontalAlignment="Left" Margin="122,0,0,0" Width="412" Background="White"/>
 

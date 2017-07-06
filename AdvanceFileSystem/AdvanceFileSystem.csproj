@@ -200,6 +200,7 @@
     </Compile>
     <Compile Include="Extra\Encrypt.cs" />
     <Compile Include="Extra\Errors.cs" />
+    <Compile Include="Extra\StringTools.cs" />
     <Compile Include="FilesSearch.xaml.cs">
       <DependentUpon>FilesSearch.xaml</DependentUpon>
     </Compile>

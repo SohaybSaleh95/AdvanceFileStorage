@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AdvanceFileSystem.Admin"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="AddEmployee" Height="469.098" Width="443.133" Background="#FF2C3E50">
+        Title="AddEmployee" Height="473.383" Width="741.705" Background="#FF2C3E50">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="201*"/>
@@ -36,9 +36,9 @@
         <TextBox x:Name="card_id_TxtBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="251"/>
         <TextBox x:Name="perission_TxtBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="251"/>
         <PasswordBox x:Name="passwordBox" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="251" Height="26"/>
-        <DatePicker x:Name="birth_date" Grid.Column="1" Margin="10,10,13,0" Grid.Row="6" VerticalAlignment="Top" DisplayDate="1980-01-01" Height="26"/>
+        <DatePicker x:Name="birth_date" Grid.Column="1" Margin="10,10,0,0" Grid.Row="6" VerticalAlignment="Top" DisplayDate="1980-01-01" Height="26" HorizontalAlignment="Left" Width="251"/>
         <ComboBox x:Name="address_Combo" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="7" VerticalAlignment="Top" Width="251" Height="26"/>
-        <Button x:Name="save_Button" Content="Save" Margin="2,10,178,0" Grid.Row="8" VerticalAlignment="Top" Background="SeaGreen" Foreground="#FFECF0F1" Grid.Column="1" Height="27"/>
+        <Button x:Name="save_Button" Content="Save" Margin="62,10,259,0" Grid.Row="8" Background="SeaGreen" Foreground="#FFECF0F1" Grid.Column="1" Height="27" VerticalAlignment="Top" Click="save_Button_Click"/>
 
     </Grid>
 </Controls:MetroWindow>
