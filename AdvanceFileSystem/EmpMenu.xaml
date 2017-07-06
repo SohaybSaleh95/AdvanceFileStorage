@@ -6,37 +6,28 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:AdvanceFileSystem"
         mc:Ignorable="d"
-        Title="Employee Menu" Height="342.489" Width="542.06" Background="#FF2C3E50">
+        Title="Employee Menu" Height="394.489" Width="542.06" Background="#FF2C3E50">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="64*"/>
-        </Grid.ColumnDefinitions>
-        <Grid x:Name="SideBar" HorizontalAlignment="Left" Width="26" Background="#FF2980B9" MouseEnter="SideBar_MouseEnter" MouseLeave="SideBar_MouseLeave">
-            <Image x:Name="EmpImage" HorizontalAlignment="Left" Height="26" Margin="0,10,0,0" VerticalAlignment="Top" Width="26">
-                <Image.Source>
-                    <BitmapImage UriSource="/images/Contacts-64.png" />
-                </Image.Source>
-            </Image>
-            <Label x:Name="EmpName" Content="EmpName" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="124" Foreground="#FFECF0F1"/>
-            <Grid HorizontalAlignment="Left" Height="226" Margin="0,75,0,0" VerticalAlignment="Top" Width="150">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="44"/>
-                    <RowDefinition Height="44"/>
-                    <RowDefinition Height="44"/>
-                    <RowDefinition Height="44"/>
-                </Grid.RowDefinitions>
-                <Grid x:Name="Files" HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="150" Grid.Row="1" Margin="0,1,0,0" MouseEnter="SideBar_Button_MouseEnter" MouseLeave="SideBar_Button_MouseLeave" Cursor="Hand" MouseLeftButtonUp="Files_MouseLeftButtonUp">
-                    <Image x:Name="image_Copy2" HorizontalAlignment="Left" Height="24" Margin="0,10,0,0" VerticalAlignment="Top" Width="24" Source="/images/File-50.png"/>
-                    <Label x:Name="label_Copy" Content="Files" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="126" Foreground="#FFECF0F1" Height="24"/>
-                </Grid>
-                <Grid x:Name="Citizens" HorizontalAlignment="Left" Height="44" Margin="0,1,0,0" VerticalAlignment="Top" Width="150" Grid.Row="2" MouseEnter="SideBar_Button_MouseEnter" MouseLeave="SideBar_Button_MouseLeave" Cursor="Hand" MouseLeftButtonUp="Citizens_MouseLeftButtonUp">
-                    <Image x:Name="image_Copy4" HorizontalAlignment="Left" Height="24" Margin="0,10,0,0" VerticalAlignment="Top" Width="24" Source="/images/Conference-50.png"/>
-                    <Label x:Name="label_Copy1" Content="Citizens" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="126" Foreground="#FFECF0F1" Height="24"/>
-                </Grid>
+        <Grid x:Name="side_bar" HorizontalAlignment="Left" Width="122" Background="#FF04440A">
+            <Image x:Name="image" Height="64" Margin="10,54,10,0" VerticalAlignment="Top"/>
+            <Image x:Name="image1" Height="30" Margin="0,10,10,0" VerticalAlignment="Top" OpacityMask="White" Stretch="Fill" Source="images/Menu-64.png" MouseLeftButtonDown="image1_MouseLeftButtonDown" HorizontalAlignment="Right" Width="30"/>
+            <Button x:Name="button" Content="Button" Click="button_Click" Margin="0,123,0,206"/>
+            <Grid x:Name="emps" Height="1" Margin="0,156,0,0" VerticalAlignment="Top" Background="#FF43CB35" RenderTransformOrigin="0.5,0.5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
             </Grid>
         </Grid>
-        <Grid x:Name="Body" Grid.Column="1" Margin="10"/>
+        <Grid x:Name="body" HorizontalAlignment="Left" Margin="122,0,0,0" Width="412" Background="White"/>
 
     </Grid>
 </Controls:MetroWindow>

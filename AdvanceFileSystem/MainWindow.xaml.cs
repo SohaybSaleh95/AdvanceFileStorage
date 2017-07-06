@@ -29,5 +29,13 @@ namespace AdvanceFileSystem
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
+
+        private void button_Click_1(object sender, RoutedEventArgs e)
+        {
+            new EmpMenu().Show();
+        }
+=======
+>>>>>>> b07d9141d957eee4c7027ae4b4b9f10489ba6c59
     }
 }

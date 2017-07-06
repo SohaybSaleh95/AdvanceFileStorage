@@ -21,6 +21,13 @@ namespace AdvanceFileSystem
     /// </summary>
     public partial class EmpMenu : MetroWindow
     {
+<<<<<<< HEAD
+        private DoubleAnimation SideBarAnimation ,BodyAnimation ,EmpsAnimation;
+        public EmpMenu()
+        {
+            InitializeComponent();
+            SideBarAnimation = new DoubleAnimation();
+=======
         MainWindow MW;
 
         DoubleAnimation ShowSideBar, HideSideBar, ShowPage;
@@ -57,57 +64,37 @@ namespace AdvanceFileSystem
         {
             SideBar.BeginAnimation(DataGrid.WidthProperty, ShowSideBar);
         }
+>>>>>>> b07d9141d957eee4c7027ae4b4b9f10489ba6c59
 
-        private void SideBar_Button_MouseEnter(object sender, MouseEventArgs e)
-        {
-            ((Grid)sender).Background = new SolidColorBrush(Color.FromRgb(4,156,255));
+            SideBarAnimation.From = 122;
+            SideBarAnimation.To = 50 ;
+            SideBarAnimation.Duration = new Duration(TimeSpan.FromMilliseconds(500));
+            //SideBarAnimation.AutoReverse = true;
+
+            BodyAnimation = new DoubleAnimation();
+            BodyAnimation.From = 412;
+            BodyAnimation.To = 484;
+            BodyAnimation.Duration = new Duration(TimeSpan.FromMilliseconds(500));
+            BodyAnimation.AutoReverse = true;
+
+            EmpsAnimation = new DoubleAnimation();
+            EmpsAnimation.From =0;
+            EmpsAnimation.To =57;
+            EmpsAnimation.Duration = new Duration(TimeSpan.FromMilliseconds(500));
+            EmpsAnimation.AutoReverse = true;
         }
 
-        private void SideBar_Button_MouseLeave(object sender, MouseEventArgs e)
+        private void button_Click(object sender, RoutedEventArgs e)
         {
-            Grid Current = (Grid)sender;
-            if(Current != Active)
-            {
-                Current.Background = new SolidColorBrush(Color.FromRgb(41, 128, 185));
-            }
+            emps.BeginAnimation(Grid.HeightProperty, EmpsAnimation);
         }
 
-        private void SideBar_MouseLeave(object sender, MouseEventArgs e)
+        private void image1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            SideBar.BeginAnimation(DataGrid.WidthProperty, HideSideBar);
+            side_bar.BeginAnimation(Grid.WidthProperty, SideBarAnimation);
+            body.BeginAnimation(Grid.WidthProperty, BodyAnimation);
         }
 
-        private void Files_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            Grid Current = (Grid)sender;
-            if (Active != Current)
-            {
-                SetActive(Current);
-                Body.Children.Clear();
-                Body.Children.Add(FilesPage);
-            }
-        }
-
-        private void Citizens_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            Grid Current = (Grid)sender;
-            if(Active != Current)
-            {
-                SetActive(Current);
-                Body.Children.Clear();
-                Body.Children.Add(CitizenPage);
-            }
-            
-        }
-
-        private void SetActive(Grid grid)
-        {
-            if(Active != null)
-            {
-                Active.Background = new SolidColorBrush(Color.FromRgb(41, 128, 185));
-            }
-            Active = grid;
-            grid.Background = new SolidColorBrush(Color.FromRgb(4, 156, 255));
-        }
+        
     }
 }
