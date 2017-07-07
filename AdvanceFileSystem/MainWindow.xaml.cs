@@ -37,7 +37,8 @@ namespace AdvanceFileSystem
             if (Extra.StringTools.AnyEmpty(UserName, Password))
             {
                 this.ShowMessageAsync("Error", "Username or Password are Empty");
-            }else
+            }
+            else
             {
                 MySqlConnection conn = Connection.Connect();
                 MySqlCommand cmd = conn.CreateCommand();

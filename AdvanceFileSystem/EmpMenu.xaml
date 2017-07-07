@@ -6,32 +6,46 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:AdvanceFileSystem"
         mc:Ignorable="d"
-        Title="Employee Menu" Height="394.489" Width="542.06" Background="#FF2C3E50">
+        Title="Employee Menu" Height="688.65" Width="936.04" Background="#FF2C3E50">
     <Grid>
-        <Grid x:Name="side_bar" HorizontalAlignment="Left" Width="122" Background="#FF06744C" RenderTransformOrigin="0.459,0.514">
-            <Image x:Name="image" Height="64" Margin="10,54,10,0" VerticalAlignment="Top"/>
+        <Grid x:Name="side_bar" HorizontalAlignment="Left" Width="120" Background="#FF06744C" RenderTransformOrigin="0.459,0.514" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="197"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
             <Image x:Name="image1" Height="30" Margin="0,10,10,0" VerticalAlignment="Top" OpacityMask="White" Stretch="Fill" Source="images/Menu-64.png" MouseLeftButtonDown="image1_MouseLeftButtonDown" HorizontalAlignment="Right" Width="30"/>
-            <Button x:Name="button" Content="Button" Click="button_Click" Margin="0,123,0,206"/>
-            <Grid x:Name="emps" Height="1" Margin="0,156,0,0" VerticalAlignment="Top" Background="#FF43CB35" RenderTransformOrigin="0.5,0.5">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="62*"/>
-                    <ColumnDefinition Width="47*"/>
-                    <ColumnDefinition Width="14*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleY="-1"/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Grid.RenderTransform>
-            </Grid>
-            <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="0,162,0,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="-0.063,-0.13"/>
-            <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="0,189,0,0" VerticalAlignment="Top" Width="122"/>
-            <Grid HorizontalAlignment="Left" Height="105" Margin="0,216,0,0" VerticalAlignment="Top" Width="122"/>
+            <Ellipse HorizontalAlignment="Left" Height="70" Margin="25,45,0,0" Stroke="Black" VerticalAlignment="Top" Width="70">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="images/user.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Label x:Name="empNameLabel" Content="Employee" Margin="0,120,0,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Center"/>
+            <Label x:Name="empJobLabel" Content="C# Developer" Margin="0,151,0,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Center"/>
+            <StackPanel Height="461" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Top">
+                <Grid x:Name="filesMenu" Height="35" Background="#CC119EDA" Margin="0,0,0,5">
+                    <Button x:Name="showFilesMenuButton" Content="Files" VerticalAlignment="Top" Height="35" Click="showFilesMenuButton_Click"/>
+                    <Button x:Name="filesAddButton" Content="Add" Margin="0,35,0,0" VerticalAlignment="Top" Height="35" Click="filesAddButton_Click"/>
+                    <Button x:Name="filesListButton" Content="List" Margin="0,70,0,0" VerticalAlignment="Top" Height="35" Click="filesListButton_Click"/>
+                </Grid>
+
+                <Grid x:Name="citizensMenu" Height="35" Background="#CC119EDA"  Margin="0,0,0,5">
+                    <Button x:Name="showCitizensMenuButton" Content="Citizens" VerticalAlignment="Top" Height="35" Click="showCitizensMenuButton_Click"/>
+                    <Button x:Name="citizensAddButton" Content="Add" Margin="0,35,0,0" VerticalAlignment="Top" Height="35" Click="citizensAddButton_Click"/>
+                    <Button x:Name="citizensListButton" Content="List" Margin="0,70,0,0" VerticalAlignment="Top" Height="35" Click="citizensListButton_Click"/>
+                </Grid>
+                <Grid x:Name="addressesMenu" Height="35" Background="#CC119EDA" Margin="0,0,0,5">
+                    <Button x:Name="showAddressesMenuButton" Content="Addresses" VerticalAlignment="Top" Height="35" Click="showAddressesMenuButton_Click"/>
+                    <Button x:Name="addressesAddButton" Content="Add" Margin="0,35,0,0" VerticalAlignment="Top" Height="35" Click="addressesAddButton_Click"/>
+                    <Button x:Name="addressesListButton" Content="List" Margin="0,70,0,0" VerticalAlignment="Top" Height="35" Click="addressesListButton_Click"/>
+                </Grid>
+                <Grid x:Name="categoriesMenu" Height="35" Background="#CC119EDA" Margin="0,0,0,5">
+                    <Button x:Name="showCategoriesMenuButton" Content="File Categories" VerticalAlignment="Top" Height="35" Click="showCategoriesMenuButton_Click"/>
+                    <Button x:Name="categoriesAddButton" Content="Add" Margin="0,35,0,0" VerticalAlignment="Top" Height="35" Click="categoriesAddButton_Click"/>
+                    <Button x:Name="categoriesListButton" Content="List" Margin="0,70,0,0" VerticalAlignment="Top" Height="35" Click="categoriesListButton_Click"/>
+                </Grid>
+            </StackPanel>
         </Grid>
-        <Grid x:Name="body" HorizontalAlignment="Left" Margin="122,0,0,0" Width="412" Background="White"/>
+        <Grid x:Name="body" Margin="120,0,0,0" Background="White"/>
 
     </Grid>
 </Controls:MetroWindow>

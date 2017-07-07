@@ -114,7 +114,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Emp\CitizenMenu.xaml">
+    <Page Include="Emp\Addresses\Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Emp\Addresses\List.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Emp\Categories\Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Emp\Categories\List.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -126,7 +138,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Emp\FilesMenu.xaml">
+    <Page Include="Emp\Citizens\Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Emp\Citizens\List.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Emp\Files\Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Emp\Files\List.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -183,8 +207,17 @@
     <Compile Include="classes\RequestLog.cs" />
     <Compile Include="classes\User.cs" />
     <Compile Include="Connection.cs" />
-    <Compile Include="Emp\CitizenMenu.xaml.cs">
-      <DependentUpon>CitizenMenu.xaml</DependentUpon>
+    <Compile Include="Emp\Addresses\Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Emp\Addresses\List.xaml.cs">
+      <DependentUpon>List.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Emp\Categories\Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Emp\Categories\List.xaml.cs">
+      <DependentUpon>List.xaml</DependentUpon>
     </Compile>
     <Compile Include="CitizenSearch.xaml.cs">
       <DependentUpon>CitizenSearch.xaml</DependentUpon>
@@ -195,8 +228,17 @@
     <Compile Include="EmpMenu.xaml.cs">
       <DependentUpon>EmpMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Emp\FilesMenu.xaml.cs">
-      <DependentUpon>FilesMenu.xaml</DependentUpon>
+    <Compile Include="Emp\Citizens\Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Emp\Citizens\List.xaml.cs">
+      <DependentUpon>List.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Emp\Files\Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Emp\Files\List.xaml.cs">
+      <DependentUpon>List.xaml</DependentUpon>
     </Compile>
     <Compile Include="Extra\Encrypt.cs" />
     <Compile Include="Extra\Errors.cs" />
@@ -255,6 +297,10 @@
   <ItemGroup>
     <Resource Include="images\Clock-64.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\user.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

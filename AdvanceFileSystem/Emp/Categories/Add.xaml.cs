@@ -13,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AdvanceFileSystem
+namespace AdvanceFileSystem.Emp.Categories
 {
     /// <summary>
-    /// Interaction logic for CitizenMenu.xaml
+    /// Interaction logic for Add.xaml
     /// </summary>
-    public partial class CitizenMenu : UserControl
+    public partial class Add : UserControl
     {
-        public CitizenMenu()
+        public Add()
         {
             InitializeComponent();
-        }
-
-        private void addCitizen_Button_Click(object sender, RoutedEventArgs e)
-        {
-            new AddCitizen().ShowDialog();
-        }
-
-        private void citizen_Search_Button_Click(object sender, RoutedEventArgs e)
-        {
-            new CitizenSearch().ShowDialog();
         }
     }
 }

@@ -13,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AdvanceFileSystem
+namespace AdvanceFileSystem.Emp.Addresses
 {
     /// <summary>
-    /// Interaction logic for FilesMenu.xaml
+    /// Interaction logic for List.xaml
     /// </summary>
-    public partial class FilesMenu : UserControl
+    public partial class List : UserControl
     {
-        public FilesMenu()
+        public List()
         {
             InitializeComponent();
-        }
-
-        private void add_File_Button_Click(object sender, RoutedEventArgs e)
-        {
-            new AddFile().ShowDialog();
-        }
-
-        private void file_Search_Button_Click(object sender, RoutedEventArgs e)
-        {
-            new FilesSearch().ShowDialog();
         }
     }
 }
