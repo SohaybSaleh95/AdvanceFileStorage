@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\
 AdvanceFileSystem
 none
 false
 DEBUG;TRACE
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\App.xaml
-241546782337
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\App.xaml
+25-682262003
 
-391912553473
-16914692751
-AddCitizen.xaml;AddFile.xaml;AdminMenu.xaml;Admin\AddEmployee.xaml;Admin\ApproveFiles.xaml;Admin\CategoriesMenu.xaml;Admin\EmployeesMenu.xaml;Admin\EmplyeesList.xaml;Admin\FilesMenu.xaml;Admin\LoginLog.xaml;Admin\LogMenu.xaml;Admin\RequestLog.xaml;Emp\Addresses\Add.xaml;Emp\Addresses\List.xaml;Emp\Categories\Add.xaml;Emp\Categories\List.xaml;CitizenSearch.xaml;EmpMenu.xaml;Emp\Citizens\Add.xaml;Emp\Citizens\List.xaml;Emp\Files\Add.xaml;Emp\Files\List.xaml;FilesSearch.xaml;MainWindow.xaml;
+41785747696
+182008043467
+AddCitizen.xaml;AddFile.xaml;AdminMenu.xaml;Admin\AddEmployee.xaml;Admin\ApproveFiles.xaml;Admin\CategoriesMenu.xaml;Admin\EmployeesMenu.xaml;Admin\EmplyeesList.xaml;Admin\FilesMenu.xaml;Admin\LoginLog.xaml;Admin\LogMenu.xaml;Admin\RequestLog.xaml;Citizens.xaml;Emp\Addresses\Add.xaml;Emp\Addresses\List.xaml;Emp\Categories\Add.xaml;Emp\Categories\List.xaml;CitizenSearch.xaml;EmpMenu.xaml;Emp\Citizens\Add.xaml;Emp\Citizens\List.xaml;Emp\Files\Add.xaml;Emp\Files\List.xaml;FilesSearch.xaml;MainWindow.xaml;
 
 False
 

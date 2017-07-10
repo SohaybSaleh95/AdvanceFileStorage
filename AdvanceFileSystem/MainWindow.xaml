@@ -6,8 +6,8 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:AdvanceFileSystem"
         mc:Ignorable="d"
-        Title="Login" Height="562.073" Width="487.627" WindowStartupLocation="CenterScreen" Background="#FF06744C">
-    <Grid Margin="10,10,10,10" Background="#FF06744C">
+        Title="Login" Height="562.073" Width="487.627" WindowStartupLocation="CenterScreen" Background="#FF07A28D">
+    <Grid Margin="10,10,10,10" Background="#FFE3F7F3">
         <Label x:Name="useNameLabel" Content="UserName" HorizontalAlignment="Left" Margin="98,126,0,0" VerticalAlignment="Top" Width="86" Foreground="#FF0E0901" Background="{x:Null}" BorderBrush="Black"/>
         <Label x:Name="passwordLabel" Content="Password" HorizontalAlignment="Left" Margin="98,223,0,0" VerticalAlignment="Top" Width="86" Foreground="#FF0E0901"/>
         <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="223,223,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.48,0.538" Width="120" TabIndex="1"/>

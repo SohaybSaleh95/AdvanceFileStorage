@@ -6,9 +6,9 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:AdvanceFileSystem"
         mc:Ignorable="d"
-        Title="Employee Menu" Height="688.65" Width="936.04" Background="#FF2C3E50">
+        Title="Employee Menu" Height="688.65" Width="936.04" Background="#FF06575B">
     <Grid>
-        <Grid x:Name="side_bar" HorizontalAlignment="Left" Width="120" Background="#FF06744C" RenderTransformOrigin="0.459,0.514" Grid.RowSpan="2">
+        <Grid x:Name="side_bar" HorizontalAlignment="Left" Width="120" Background="#FF07A28D" RenderTransformOrigin="0.459,0.514" Grid.RowSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="197"/>
                 <RowDefinition/>
@@ -39,13 +39,13 @@
                     <Button x:Name="addressesListButton" Content="List" Margin="0,70,0,0" VerticalAlignment="Top" Height="35" Click="addressesListButton_Click"/>
                 </Grid>
                 <Grid x:Name="categoriesMenu" Height="35" Background="#CC119EDA" Margin="0,0,0,5">
-                    <Button x:Name="showCategoriesMenuButton" Content="File Categories" VerticalAlignment="Top" Height="35" Click="showCategoriesMenuButton_Click"/>
+                    <Button x:Name="showCategoriesMenuButton" Content="File Categories" VerticalAlignment="Top" Height="35" Click="showCategoriesMenuButton_Click" Margin="-4,0,4,0"/>
                     <Button x:Name="categoriesAddButton" Content="Add" Margin="0,35,0,0" VerticalAlignment="Top" Height="35" Click="categoriesAddButton_Click"/>
                     <Button x:Name="categoriesListButton" Content="List" Margin="0,70,0,0" VerticalAlignment="Top" Height="35" Click="categoriesListButton_Click"/>
                 </Grid>
             </StackPanel>
         </Grid>
-        <Grid x:Name="body" Margin="120,0,0,0" Background="White"/>
+        <Grid x:Name="body" Margin="120,0,0,0" Background="#FFE3F7F3"/>
 
     </Grid>
 </Controls:MetroWindow>

@@ -123,10 +123,8 @@ D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\FilesM
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\LoginLog.g.cs
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\LogMenu.g.cs
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\RequestLog.g.cs
-D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\CitizenMenu.g.cs
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\CitizenSearch.g.cs
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\EmpMenu.g.cs
-D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\FilesMenu.g.cs
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\FilesSearch.g.cs
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\MainWindow.g.cs
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\App.g.cs
@@ -152,10 +150,8 @@ D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\FilesM
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\LoginLog.baml
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\LogMenu.baml
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\RequestLog.baml
-D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\CitizenMenu.baml
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\CitizenSearch.baml
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\EmpMenu.baml
-D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\FilesMenu.baml
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\FilesSearch.baml
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\MainWindow.baml
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.g.resources
@@ -177,3 +173,21 @@ E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Citizens\
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Citizens\List.baml
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Files\Add.baml
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Files\List.baml
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Addresses\Add.g.cs
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Addresses\List.g.cs
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Categories\Add.g.cs
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Categories\List.g.cs
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Citizens\Add.g.cs
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Citizens\List.g.cs
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Files\Add.g.cs
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Files\List.g.cs
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Addresses\Add.baml
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Addresses\List.baml
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Categories\Add.baml
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Categories\List.baml
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Citizens\Add.baml
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Citizens\List.baml
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Files\Add.baml
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Files\List.baml
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Citizens.g.cs
+D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Citizens.baml
