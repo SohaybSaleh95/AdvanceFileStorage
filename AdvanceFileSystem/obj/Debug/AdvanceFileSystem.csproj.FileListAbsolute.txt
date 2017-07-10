@@ -65,7 +65,6 @@ E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\bin\Debug\MahApps.Metro
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\bin\Debug\MahApps.Metro.xml
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\bin\Debug\MySql.Data.xml
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.csprojResolveAssemblyReference.cache
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AddCitizen.g.cs
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AddFile.g.cs
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdminMenu.g.cs
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\AddEmployee.g.cs
@@ -77,7 +76,6 @@ E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\FilesMe
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\LoginLog.g.cs
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\LogMenu.g.cs
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\RequestLog.g.cs
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\CitizenSearch.g.cs
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\EmpMenu.g.cs
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\FilesSearch.g.cs
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\MainWindow.g.cs
@@ -85,7 +83,6 @@ E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\App.g.cs
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem_MarkupCompile.cache
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem_MarkupCompile.lref
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\App.baml
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AddCitizen.baml
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AddFile.baml
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdminMenu.baml
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\AddEmployee.baml
@@ -97,7 +94,6 @@ E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\FilesMe
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\LoginLog.baml
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\LogMenu.baml
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Admin\RequestLog.baml
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\CitizenSearch.baml
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\EmpMenu.baml
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\FilesSearch.baml
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\MainWindow.baml
@@ -157,20 +153,8 @@ D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\MainWindow.b
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.g.resources
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.Properties.Resources.resources
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.csproj.GenerateResource.Cache
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Addresses\Add.g.cs
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Addresses\List.g.cs
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Categories\Add.g.cs
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Categories\List.g.cs
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Citizens\Add.g.cs
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Citizens\List.g.cs
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Files\Add.g.cs
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Files\List.g.cs
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Addresses\Add.baml
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Addresses\List.baml
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Categories\Add.baml
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Categories\List.baml
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Citizens\Add.baml
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Citizens\List.baml
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Files\Add.baml
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Files\List.baml
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Addresses\Add.g.cs
@@ -191,3 +175,7 @@ D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Files\Ad
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Files\List.baml
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Citizens.g.cs
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Citizens.baml
+E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Citizens.g.cs
+E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Addresses.g.cs
+E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Addresses.baml
+E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Citizens.baml

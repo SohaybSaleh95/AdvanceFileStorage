@@ -15,14 +15,14 @@ using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 using AdvanceFileSystem.classes;
 
-namespace AdvanceFileSystem.Emp.Addresses
+namespace AdvanceFileSystem.Emp
 {
     /// <summary>
     /// Interaction logic for Add.xaml
     /// </summary>
-    public partial class Add : UserControl
+    public partial class Addresses : UserControl
     {
-        public Add()
+        public Addresses()
         {
             InitializeComponent();
 

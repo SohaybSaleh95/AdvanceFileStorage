@@ -1,12 +1,13 @@
-﻿<Window x:Class="AdvanceFileSystem.Citizens"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AdvanceFileSystem"
-        mc:Ignorable="d"
-        Title="Citizens" Height="500.001" Width="776.597">
-    <Grid Margin="10,0,0,0" Background="#FFE3F7F3">
+﻿<UserControl x:Class="AdvanceFileSystem.Emp.Citizens"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AdvanceFileSystem.Emp"
+             xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Height="500.001" Width="776.597" Background="#FF07A28D">
+    <Grid Margin="0,0,0,0" Background="#FFE3F7F3">
         <TextBox x:Name="searchBox" HorizontalAlignment="Left" Height="23" Margin="51,23,0,0" TextWrapping="Wrap" Text="Search
                  " VerticalAlignment="Top" Width="120"/>
         <DataGrid x:Name="citizenTable" HorizontalAlignment="Left" Margin="448,63,0,0" VerticalAlignment="Top" Height="264" Width="288"/>
@@ -20,9 +21,9 @@
         <DatePicker HorizontalAlignment="Left" Margin="189,176,0,0" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="street" Content="Street" HorizontalAlignment="Left" Margin="51,259,0,0" VerticalAlignment="Top" Width="114"/>
         <Label x:Name="pobox" Content="PoBox" HorizontalAlignment="Left" Margin="51,301,0,0" VerticalAlignment="Top" Width="114"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="189,259,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="189,302,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="189,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="189,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="save" Content="save" HorizontalAlignment="Left" Margin="51,384,0,0" VerticalAlignment="Top" Width="75" Background="#FFCAF19B"/>
         <Button x:Name="delete" Content="delete" HorizontalAlignment="Left" Margin="189,384,0,0" VerticalAlignment="Top" Width="75" Background="#FFF7705A"/>
     </Grid>
-</Window>
+</UserControl>

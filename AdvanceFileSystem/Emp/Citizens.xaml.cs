@@ -1,5 +1,4 @@
-﻿using MahApps.Metro.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AdvanceFileSystem
+namespace AdvanceFileSystem.Emp
 {
     /// <summary>
-    /// Interaction logic for CitizenSearch.xaml
+    /// Interaction logic for Citizens.xaml
     /// </summary>
-    public partial class CitizenSearch : MetroWindow
+    public partial class Citizens : UserControl
     {
-        public CitizenSearch()
+        public Citizens()
         {
             InitializeComponent();
         }

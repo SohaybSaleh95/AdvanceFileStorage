@@ -6,7 +6,8 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:AdvanceFileSystem"
         mc:Ignorable="d"
-        Title="Employee Menu" Height="688.65" Width="936.04" Background="#FF06575B">
+        GlowBrush="Black"
+        Title="Employee Menu" Height="688.65" Width="936.04" Background="#FF06575B" WindowTitleBrush="#FFF90000">
     <Grid>
         <Grid x:Name="side_bar" HorizontalAlignment="Left" Width="120" Background="#FF07A28D" RenderTransformOrigin="0.459,0.514" Grid.RowSpan="2">
             <Grid.RowDefinitions>
@@ -22,27 +23,10 @@
             <Label x:Name="empNameLabel" Content="Employee" Margin="0,120,0,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Center"/>
             <Label x:Name="empJobLabel" Content="C# Developer" Margin="0,151,0,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Center"/>
             <StackPanel Height="461" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Top">
-                <Grid x:Name="filesMenu" Height="35" Background="#CC119EDA" Margin="0,0,0,5">
-                    <Button x:Name="showFilesMenuButton" Content="Files" VerticalAlignment="Top" Height="35" Click="showFilesMenuButton_Click"/>
-                    <Button x:Name="filesAddButton" Content="Add" Margin="0,35,0,0" VerticalAlignment="Top" Height="35" Click="filesAddButton_Click"/>
-                    <Button x:Name="filesListButton" Content="List" Margin="0,70,0,0" VerticalAlignment="Top" Height="35" Click="filesListButton_Click"/>
-                </Grid>
-
-                <Grid x:Name="citizensMenu" Height="35" Background="#CC119EDA"  Margin="0,0,0,5">
-                    <Button x:Name="showCitizensMenuButton" Content="Citizens" VerticalAlignment="Top" Height="35" Click="showCitizensMenuButton_Click"/>
-                    <Button x:Name="citizensAddButton" Content="Add" Margin="0,35,0,0" VerticalAlignment="Top" Height="35" Click="citizensAddButton_Click"/>
-                    <Button x:Name="citizensListButton" Content="List" Margin="0,70,0,0" VerticalAlignment="Top" Height="35" Click="citizensListButton_Click"/>
-                </Grid>
-                <Grid x:Name="addressesMenu" Height="35" Background="#CC119EDA" Margin="0,0,0,5">
-                    <Button x:Name="showAddressesMenuButton" Content="Addresses" VerticalAlignment="Top" Height="35" Click="showAddressesMenuButton_Click"/>
-                    <Button x:Name="addressesAddButton" Content="Add" Margin="0,35,0,0" VerticalAlignment="Top" Height="35" Click="addressesAddButton_Click"/>
-                    <Button x:Name="addressesListButton" Content="List" Margin="0,70,0,0" VerticalAlignment="Top" Height="35" Click="addressesListButton_Click"/>
-                </Grid>
-                <Grid x:Name="categoriesMenu" Height="35" Background="#CC119EDA" Margin="0,0,0,5">
-                    <Button x:Name="showCategoriesMenuButton" Content="File Categories" VerticalAlignment="Top" Height="35" Click="showCategoriesMenuButton_Click" Margin="-4,0,4,0"/>
-                    <Button x:Name="categoriesAddButton" Content="Add" Margin="0,35,0,0" VerticalAlignment="Top" Height="35" Click="categoriesAddButton_Click"/>
-                    <Button x:Name="categoriesListButton" Content="List" Margin="0,70,0,0" VerticalAlignment="Top" Height="35" Click="categoriesListButton_Click"/>
-                </Grid>
+                <Label x:Name="citizensButton" Content="Citizens" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" MouseLeftButtonUp="citizensButton_MouseLeftButtonUp" Cursor="Hand"/>
+                <Label x:Name="addressesButton" Content="Addresses" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" MouseLeftButtonUp="addressesButton_MouseLeftButtonUp" Cursor="Hand"/>
+                <Label x:Name="filesButton" Content="Files" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand"/>
+                <Label x:Name="categoriesButton" Content="Categories" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand"/>
             </StackPanel>
         </Grid>
         <Grid x:Name="body" Margin="120,0,0,0" Background="#FFE3F7F3"/>

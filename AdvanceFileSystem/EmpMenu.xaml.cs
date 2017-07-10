@@ -30,6 +30,8 @@ namespace AdvanceFileSystem
             AddressesAnimation,
             CategoriesAnimation;
 
+        private Label Active { get; set; }
+
         private UserControl BodyContent;
 
         public EmpMenu()
@@ -59,161 +61,44 @@ namespace AdvanceFileSystem
             CategoriesAnimation = CreateMenuAnimation();
         }
 
-        //Show Citizens Menu
-        private void showCitizensMenuButton_Click(object sender, RoutedEventArgs e)
-        {
-            citizensMenu.BeginAnimation(Grid.HeightProperty, CitizensAnimation);
-            ReverseValues(CitizensAnimation);
-        }
-
-        //Show Addresses Menu
-        private void showAddressesMenuButton_Click(object sender, RoutedEventArgs e)
-        {
-            addressesMenu.BeginAnimation(Grid.HeightProperty, AddressesAnimation);
-            ReverseValues(AddressesAnimation);
-        }
-
-        //Show Categories
-        private void showCategoriesMenuButton_Click(object sender, RoutedEventArgs e)
-        {
-            categoriesMenu.BeginAnimation(Grid.HeightProperty, CategoriesAnimation);
-            ReverseValues(CategoriesAnimation);
-        }
-
-        //Show Add file Interface
-        private async void filesAddButton_Click(object sender, RoutedEventArgs e)
-        {
-            if(BodyContent != null)
-            {
-                HideBody();
-                await Task.Delay(500);
-            }
-            body.Children.Clear();
-            BodyContent = new Emp.Files.Add();
-            BodyContent.Margin = new Thickness(0);
-            BodyContent.Opacity = 0;
-            body.Children.Add(BodyContent);
-            ShowBody();
-        }
-
-        //Show Files List
-        private async void filesListButton_Click(object sender, RoutedEventArgs e)
+        private async void citizensButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             if (BodyContent != null)
             {
                 HideBody();
-                await Task.Delay(500);
+                await Task.Delay(250);
             }
             body.Children.Clear();
-            BodyContent = new Emp.Files.List();
+            BodyContent = new Emp.Citizens();
             BodyContent.Margin = new Thickness(0);
+            BodyContent.Width = body.Width;
+            BodyContent.Height = body.Height;
             BodyContent.Opacity = 0;
             body.Children.Add(BodyContent);
             ShowBody();
+
+            ActiveLabel(sender);
         }
 
-        //Show Add Citizen Interface
-        private async void citizensAddButton_Click(object sender, RoutedEventArgs e)
+        private async void addressesButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             if (BodyContent != null)
             {
                 HideBody();
-                await Task.Delay(500);
+                await Task.Delay(250);
             }
             body.Children.Clear();
-            BodyContent = new Emp.Citizens.Add();
+            BodyContent = new Emp.Addresses();
             BodyContent.Margin = new Thickness(0);
+            BodyContent.Width = body.Width;
+            BodyContent.Height = body.Height;
             BodyContent.Opacity = 0;
             body.Children.Add(BodyContent);
             ShowBody();
+
+            ActiveLabel(sender);
         }
 
-        //Show Citizens List intergace
-        private async void citizensListButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (BodyContent != null)
-            {
-                HideBody();
-                await Task.Delay(500);
-            }
-            body.Children.Clear();
-            BodyContent = new Emp.Citizens.List();
-            BodyContent.Margin = new Thickness(0);
-            BodyContent.Opacity = 0;
-            body.Children.Add(BodyContent);
-            ShowBody();
-        }
-
-        //Show Add address Interface
-        private async void addressesAddButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (BodyContent != null)
-            {
-                HideBody();
-                await Task.Delay(500);
-            }
-            body.Children.Clear();
-            BodyContent = new Emp.Addresses.Add();
-            BodyContent.Margin = new Thickness(0);
-            BodyContent.Opacity = 0;
-            body.Children.Add(BodyContent);
-            ShowBody();
-        }
-
-        //Show addresses list interface
-        private async void addressesListButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (BodyContent != null)
-            {
-                HideBody();
-                await Task.Delay(500);
-            }
-            body.Children.Clear();
-            BodyContent = new Emp.Addresses.List();
-            BodyContent.Margin = new Thickness(0);
-            BodyContent.Opacity = 0;
-            body.Children.Add(BodyContent);
-            ShowBody();
-        }
-
-        //Show add Categories interface
-        private async void categoriesAddButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (BodyContent != null)
-            {
-                HideBody();
-                await Task.Delay(500);
-            }
-            body.Children.Clear();
-            BodyContent = new Emp.Addresses.List();
-            BodyContent.Margin = new Thickness(0);
-            BodyContent.Opacity = 0;
-            body.Children.Add(BodyContent);
-            ShowBody();
-        }
-
-        //Show categories list interface
-        private async void categoriesListButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (BodyContent != null)
-            {
-                HideBody();
-                await Task.Delay(500);
-            }
-            body.Children.Clear();
-            BodyContent = new Emp.Categories.Add();
-            BodyContent.Margin = new Thickness(0);
-            BodyContent.Opacity = 0;
-            body.Children.Add(BodyContent);
-            ShowBody();
-        }
-
-        //Show files Menu
-        private void showFilesMenuButton_Click(object sender, RoutedEventArgs e)
-        {
-            filesMenu.BeginAnimation(Grid.HeightProperty, FilesAnimation);
-            ReverseValues(FilesAnimation);
-        }
 
         /**
          * Create Menu Animation
@@ -256,6 +141,21 @@ namespace AdvanceFileSystem
             double? temp = animation.From;
             animation.From = animation.To;
             animation.To = temp;
+        }
+
+        private void ActiveLabel(object label)
+        {
+
+            if (Active != null)
+            {
+                Active.BorderThickness = new Thickness(0);
+                Active.Background = new SolidColorBrush(Color.FromRgb(7,162,141));
+            }
+            Active = (Label)label;
+            Active.BorderThickness = new Thickness(3, 0, 0, 0);
+            Active.BorderBrush = new SolidColorBrush(Color.FromRgb(7, 162, 141));
+            Active.Background = new SolidColorBrush(Color.FromRgb(227,247,243));
+            
         }
     }
 }

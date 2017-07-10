@@ -35,17 +35,18 @@ namespace AdvanceFileSystem
             return Conn;
         }
 
-        /*
-         * 
-         * انسوهم مؤقتا
-        public static int Execute(string query)
+        
+        public static MySqlDataReader ExecuteReader(string query)
         {
             Connect();
-            MySqlCommand cmd = Conn.CreateCommand();
-            cmd.CommandText = query;
-            return cmd.ExecuteNonQuery();
+            return CreateCommand(query).ExecuteReader();
         }
 
+        public static int ExecuteNonQuery(string query)
+        {
+            Connect();
+            return CreateCommand(query).ExecuteNonQuery();
+        }
 
         public static MySqlCommand CreateCommand()
         {
@@ -58,25 +59,7 @@ namespace AdvanceFileSystem
             Connect();
             MySqlCommand cmd = Conn.CreateCommand();
             cmd.CommandText = query;
-            cmd.Prepare();
             return cmd;
         }
-
-        public static bool CheckAccount(string username,string password)
-        {
-            Connect();
-            MySqlCommand cmd = CreateCommand(SelectAccount);
-
-            password = Extra.Encrypt.MD5(password);
-            
-            cmd.Parameters.AddWithValue("@username", username);
-            cmd.Parameters.AddWithValue("@password", password);
-
-            MySqlDataReader _Reader = cmd.ExecuteReader();
-            bool HasRows = _Reader.HasRows;
-            _Reader.Close();
-            return HasRows;
-        }
-        */
     }
 }

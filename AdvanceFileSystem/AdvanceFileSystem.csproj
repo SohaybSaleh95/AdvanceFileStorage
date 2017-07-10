@@ -43,6 +43,7 @@
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -68,10 +69,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AddCitizen.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="AddFile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -116,39 +113,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Citizens.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Emp\Addresses.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Emp\Addresses\Add.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Emp\Addresses\List.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Emp\Categories\Add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Emp\Categories\List.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CitizenSearch.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EmpMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Emp\Citizens\Add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Emp\Citizens\List.xaml">
+    <Page Include="Emp\Citizens.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,9 +141,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="AddCitizen.xaml.cs">
-      <DependentUpon>AddCitizen.xaml</DependentUpon>
-    </Compile>
     <Compile Include="AddFile.xaml.cs">
       <DependentUpon>AddFile.xaml</DependentUpon>
     </Compile>
@@ -208,29 +178,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Citizens.xaml.cs">
-      <DependentUpon>Citizens.xaml</DependentUpon>
-    </Compile>
     <Compile Include="classes\Address.cs" />
     <Compile Include="classes\Employee.cs" />
     <Compile Include="classes\LoginLog.cs" />
     <Compile Include="classes\RequestLog.cs" />
     <Compile Include="classes\User.cs" />
     <Compile Include="Connection.cs" />
-    <Compile Include="Emp\Addresses\Add.xaml.cs">
-      <DependentUpon>Add.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Emp\Addresses\List.xaml.cs">
-      <DependentUpon>List.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Emp\Categories\Add.xaml.cs">
-      <DependentUpon>Add.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Emp\Categories\List.xaml.cs">
-      <DependentUpon>List.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CitizenSearch.xaml.cs">
-      <DependentUpon>CitizenSearch.xaml</DependentUpon>
+    <Compile Include="Emp\Addresses.xaml.cs">
+      <DependentUpon>Addresses.xaml</DependentUpon>
     </Compile>
     <Compile Include="classes\Category.cs" />
     <Compile Include="classes\Citizen.cs" />
@@ -238,11 +193,8 @@
     <Compile Include="EmpMenu.xaml.cs">
       <DependentUpon>EmpMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Emp\Citizens\Add.xaml.cs">
-      <DependentUpon>Add.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Emp\Citizens\List.xaml.cs">
-      <DependentUpon>List.xaml</DependentUpon>
+    <Compile Include="Emp\Citizens.xaml.cs">
+      <DependentUpon>Citizens.xaml</DependentUpon>
     </Compile>
     <Compile Include="Emp\Files\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
@@ -262,6 +214,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Citizen.cs" />
+    <Compile Include="Models\DeniedFileLog.cs" />
+    <Compile Include="Models\DeniedLoginLog.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\EditLog.cs" />
+    <Compile Include="Models\File.cs" />
+    <Compile Include="Models\LoginLog.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\Participant.cs" />
+    <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\RequestLog.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
