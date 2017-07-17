@@ -15,6 +15,7 @@ namespace AdvanceFileSystem.Models
         public int Id { get; set; }
 
         [Required]
+        [StringLength(20)]
         public string UserName { get; set; }
 
         [Required]

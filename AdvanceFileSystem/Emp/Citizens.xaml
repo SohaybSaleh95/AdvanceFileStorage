@@ -8,22 +8,27 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Height="500.001" Width="776.597" Background="#FF07A28D">
     <Grid Margin="0,0,0,0" Background="#FFE3F7F3">
-        <TextBox x:Name="searchBox" HorizontalAlignment="Left" Height="23" Margin="51,23,0,0" TextWrapping="Wrap" Text="Search
-                 " VerticalAlignment="Top" Width="120"/>
-        <DataGrid x:Name="citizenTable" HorizontalAlignment="Left" Margin="448,63,0,0" VerticalAlignment="Top" Height="264" Width="288"/>
-        <Label x:Name="name" Content="Full Name" HorizontalAlignment="Left" Margin="51,92,0,0" VerticalAlignment="Top" Width="114"/>
-        <Label x:Name="cardId" Content="Card Id" HorizontalAlignment="Left" Margin="51,133,0,0" VerticalAlignment="Top" Width="114"/>
-        <Label x:Name="birthdate" Content="BirthDate" HorizontalAlignment="Left" Margin="51,176,0,0" VerticalAlignment="Top" Width="114"/>
-        <Label x:Name="address" Content="Address" HorizontalAlignment="Left" Margin="51,219,0,0" VerticalAlignment="Top" Width="114"/>
-        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="23" Margin="189,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="cardBox" HorizontalAlignment="Left" Height="23" Margin="189,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="addBox" HorizontalAlignment="Left" Height="23" Margin="189,219,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <DatePicker HorizontalAlignment="Left" Margin="189,176,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="street" Content="Street" HorizontalAlignment="Left" Margin="51,259,0,0" VerticalAlignment="Top" Width="114"/>
-        <Label x:Name="pobox" Content="PoBox" HorizontalAlignment="Left" Margin="51,301,0,0" VerticalAlignment="Top" Width="114"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="189,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="189,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="save" Content="save" HorizontalAlignment="Left" Margin="51,384,0,0" VerticalAlignment="Top" Width="75" Background="#FFCAF19B"/>
-        <Button x:Name="delete" Content="delete" HorizontalAlignment="Left" Margin="189,384,0,0" VerticalAlignment="Top" Width="75" Background="#FFF7705A"/>
+        <DataGrid x:Name="citizenTable" IsReadOnly="True" Margin="409,63,21,0" VerticalAlignment="Top" ColumnWidth="*" Height="313" MouseDoubleClick="citizenTable_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding FullName}" ClipboardContentBinding="{x:Null}" Header="Name" HeaderStringFormat="Name"/>
+                <DataGridTextColumn Binding="{Binding Street}" ClipboardContentBinding="{x:Null}" Header="Street" HeaderStringFormat="Street"/>
+                <DataGridTextColumn Binding="{Binding PoBox}" ClipboardContentBinding="{x:Null}" Header="PoBox" HeaderStringFormat="PoBox"/>
+                <DataGridTextColumn Binding="{Binding BirthDate}" ClipboardContentBinding="{x:Null}" Header="BirthDate" HeaderStringFormat="BirthDate"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="name" Content="Full Name" HorizontalAlignment="Left" Margin="51,73,0,0" VerticalAlignment="Top" Width="114"/>
+        <Label x:Name="cardId" Content="Card Id" HorizontalAlignment="Left" Margin="51,114,0,0" VerticalAlignment="Top" Width="114"/>
+        <Label x:Name="birthdate" Content="BirthDate" HorizontalAlignment="Left" Margin="51,157,0,0" VerticalAlignment="Top" Width="114"/>
+        <Label x:Name="address" Content="Address" HorizontalAlignment="Left" Margin="51,200,0,0" VerticalAlignment="Top" Width="114"/>
+        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="23" Margin="189,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TabIndex="1"/>
+        <TextBox x:Name="cardBox" HorizontalAlignment="Left" Height="23" Margin="189,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TabIndex="2"/>
+        <TextBox x:Name="addBox" HorizontalAlignment="Left" Height="23" Margin="189,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TabIndex="4"/>
+        <DatePicker x:Name="birthDate" HorizontalAlignment="Left" Margin="189,157,0,0" VerticalAlignment="Top" Width="120" TabIndex="3"/>
+        <Label x:Name="street" Content="Street" HorizontalAlignment="Left" Margin="51,240,0,0" VerticalAlignment="Top" Width="114"/>
+        <Label x:Name="pobox" Content="PoBox" HorizontalAlignment="Left" Margin="51,282,0,0" VerticalAlignment="Top" Width="114"/>
+        <TextBox x:Name="streettBox" HorizontalAlignment="Left" Height="23" Margin="189,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="5"/>
+        <TextBox x:Name="poBox1" HorizontalAlignment="Left" Height="23" Margin="189,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="6"/>
+        <Button x:Name="save" Content="save" HorizontalAlignment="Left" Margin="51,373,0,0" VerticalAlignment="Top" Width="75" Background="#FFCAF19B" TabIndex="7" Click="save_Click"/>
+        <Button x:Name="delete" Content="delete" HorizontalAlignment="Left" Margin="189,373,0,0" VerticalAlignment="Top" Width="75" Background="#FFF7705A" TabIndex="8"/>
     </Grid>
 </UserControl>

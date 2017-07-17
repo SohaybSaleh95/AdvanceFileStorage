@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\
+D:\Graduation_Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\
 AdvanceFileSystem
 none
 false
 DEBUG;TRACE
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\App.xaml
+D:\Graduation_Project\AdvanceFileSystem\AdvanceFileSystem\App.xaml
 18-760738342
 
-52-373932647
-19769745132
+521444459942
+19915304498
 AddFile.xaml;AdminMenu.xaml;Admin\AddEmployee.xaml;Admin\ApproveFiles.xaml;Admin\CategoriesMenu.xaml;Admin\EmployeesMenu.xaml;Admin\EmplyeesList.xaml;Admin\FilesMenu.xaml;Admin\LoginLog.xaml;Admin\LogMenu.xaml;Admin\RequestLog.xaml;Emp\Addresses.xaml;EmpMenu.xaml;Emp\Citizens.xaml;Emp\Files\Add.xaml;Emp\Files\List.xaml;FilesSearch.xaml;MainWindow.xaml;
 
 True

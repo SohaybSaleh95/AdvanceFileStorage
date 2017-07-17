@@ -33,11 +33,11 @@ namespace AdvanceFileSystem.Emp
         {
             string address = addressBox.Text;
 
-            MySqlConnection conn = Connection.Connect();
-            MySqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "INSERT INTO address (address) VALUES('" + address + "');";
-
-            cmd.ExecuteNonQuery();
+           // MySqlConnection conn = Connection.Connect();
+            //mySqlCommand cmd = conn.CreateCommand();
+         
+            //cmd.ExecuteNonQuery();
+            Connection.ExecuteNonQuery("INSERT INTO address (address) VALUES('" + address + "');");
             this.address();
             addressBox.Clear();
         }

@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
+using AdvanceFileSystem.Models;
 
 namespace AdvanceFileSystem
 {
@@ -32,9 +33,10 @@ namespace AdvanceFileSystem
 
         private void button_Click_1(object sender, RoutedEventArgs e)
         {
-            try { 
-            string UserName = userNameBox.Text;
-            string Password = passwordBox.Password;
+            try
+            {
+                string UserName = userNameBox.Text;
+                string Password = passwordBox.Password;
                 if (Extra.StringTools.AnyEmpty(UserName, Password))
                 {
                     this.ShowMessageAsync("Error", "Username or Password are Empty");
@@ -73,8 +75,9 @@ namespace AdvanceFileSystem
                         this.ShowMessageAsync("Invalid information", Extra.Errors.Invalid);
                     }
                 }
-                      
-            }catch(Exception ex)
+
+            }
+            catch (Exception ex)
             {
                 this.ShowMessageAsync("Error", ex.Message);
             }
