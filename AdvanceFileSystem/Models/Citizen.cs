@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel;
 
 namespace AdvanceFileSystem.Models
 {
@@ -12,7 +13,7 @@ namespace AdvanceFileSystem.Models
     public class Citizen : Model
     {
         [Key]
-        [Range(100000000,999999999)]
+        [Range(100000000,999999999,ErrorMessage = "Card id must be 9 numbers exactly")]
         public int Id { get; set; }
 
         [Required]
@@ -24,6 +25,7 @@ namespace AdvanceFileSystem.Models
 
         [Required]
         [ForeignKey("Address")]
+        [Browsable(false)]
         public short AddressId { get; set; }
         public virtual Address Address { get; set; }
 
@@ -32,5 +34,23 @@ namespace AdvanceFileSystem.Models
 
         [Required]
         public string PoBox { get; set; }
+
+        public Citizen()
+        {
+
+        }
+
+        public Citizen(string name,string id,DateTime birthdate,short address,string street,string pobox)
+        {
+            this.FullName = name;
+            int Id;
+            int.TryParse(id, out Id);
+            this.Id = Id;
+            BirthDate = birthdate;
+            AddressId = address;
+            Street = street;
+            PoBox = pobox;
+        }
+
     }
 }

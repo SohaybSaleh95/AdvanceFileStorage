@@ -1,0 +1,14 @@
+﻿<Controls:MetroWindow x:Class="AdvanceFileSystem.EmptyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:AdvanceFileSystem"
+        mc:Ignorable="d"
+        GlowBrush="Black"
+        Title="EmptyWindow" Height="430.043" Width="736.481" WindowStartupLocation="CenterScreen" Background="#FF07A28D">
+    <Grid Margin="10,10,10,10" x:Name="Body"  Background="#FFE3F7F3">
+
+    </Grid>
+</Controls:MetroWindow>

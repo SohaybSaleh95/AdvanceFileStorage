@@ -63,13 +63,17 @@ namespace AdvanceFileSystem
 
         private async void citizensButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
+            citizensMenuGrid.BeginAnimation(Grid.HeightProperty, CitizensAnimation);
+            ReverseValues(CitizensAnimation);
+            ActiveLabel(sender);
+            /*
             if (BodyContent != null)
             {
                 HideBody();
                 await Task.Delay(250);
             }
             body.Children.Clear();
-            BodyContent = new Emp.Citizens();
+            BodyContent = new Emp.AddCitizen();
             BodyContent.Margin = new Thickness(0);
             BodyContent.Width = body.Width;
             BodyContent.Height = body.Height;
@@ -77,7 +81,7 @@ namespace AdvanceFileSystem
             body.Children.Add(BodyContent);
             ShowBody();
 
-            ActiveLabel(sender);
+            */
         }
 
         private async void addressesButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -99,6 +103,40 @@ namespace AdvanceFileSystem
             ActiveLabel(sender);
         }
 
+        private async void citizensAddButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (BodyContent != null)
+            {
+                HideBody();
+                await Task.Delay(250);
+            }
+            body.Children.Clear();
+            BodyContent = new Emp.AddCitizen();
+            BodyContent.Margin = new Thickness(0);
+            BodyContent.Width = body.Width;
+            BodyContent.Height = body.Height;
+            BodyContent.Opacity = 0;
+            body.Children.Add(BodyContent);
+            ShowBody();
+        }
+
+        private async void citizensListButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (BodyContent != null)
+            {
+                HideBody();
+                await Task.Delay(250);
+            }
+            body.Children.Clear();
+            BodyContent = new Emp.CitizenList();
+            BodyContent.Margin = new Thickness(0);
+            BodyContent.Width = body.Width;
+            BodyContent.Height = body.Height;
+            BodyContent.Opacity = 0;
+            body.Children.Add(BodyContent);
+            ShowBody();
+        }
+
 
         /**
          * Create Menu Animation
@@ -110,8 +148,8 @@ namespace AdvanceFileSystem
         private DoubleAnimation CreateMenuAnimation()
         {
             DoubleAnimation da = new DoubleAnimation();
-            da.From = 35;
-            da.To = 105;
+            da.From = 0;
+            da.To = 70;
             da.Duration = new Duration(TimeSpan.FromMilliseconds(250));
             return da;
         }
@@ -146,11 +184,12 @@ namespace AdvanceFileSystem
         private void ActiveLabel(object label)
         {
 
-            if (Active != null)
+            if (Active != null || Active == (Label)label)
             {
                 Active.BorderThickness = new Thickness(0);
                 Active.Background = new SolidColorBrush(Color.FromRgb(7,162,141));
             }
+            
             Active = (Label)label;
             Active.BorderThickness = new Thickness(3, 0, 0, 0);
             Active.BorderBrush = new SolidColorBrush(Color.FromRgb(7, 162, 141));

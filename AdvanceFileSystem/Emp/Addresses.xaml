@@ -7,15 +7,16 @@
              xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d" Height="491.438" Width="795" Background="#FF07A28D">
     <Grid>
-        <Grid Margin="10" Background="#FFE3F7F3">
+        <Grid Margin="0" Background="#FFE3F7F3">
             <TextBox x:Name="addressBox" HorizontalAlignment="Left" Height="31" Margin="78,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="196" RenderTransformOrigin="0.471,0.615"/>
-            <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Left" Margin="138,302,0,0" VerticalAlignment="Top" Width="76" Visibility="Hidden"/>
-            <DataGrid x:Name="addresstable" HorizontalAlignment="Left" Margin="418,38,0,0" VerticalAlignment="Top" Height="407" Width="317" ColumnWidth="*">
+            <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Left" Margin="57,302,0,0" VerticalAlignment="Top" Width="76" Visibility="Hidden" Click="saveButton_Click"/>
+            <DataGrid x:Name="addresstable" HorizontalAlignment="Left" Margin="418,38,0,0" VerticalAlignment="Top" Height="407" Width="317" ColumnWidth="*" MouseDoubleClick="addresstable_MouseDoubleClick" IsReadOnly="True" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Name}" ClipboardContentBinding="{x:Null}" Foreground="Black" Header="Address" HeaderStringFormat="Address"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button x:Name="addButton" Content="Add" HorizontalAlignment="Left" Margin="138,302,0,0" VerticalAlignment="Top" Width="76" Click="addButton_Click" Background="#FFCAF19B"/>
+            <Button x:Name="addButton" Content="Add" HorizontalAlignment="Left" Margin="57,302,0,0" VerticalAlignment="Top" Width="76" Click="addButton_Click" Background="#FFCAF19B"/>
+            <Button x:Name="clearButton" Content="Clear" HorizontalAlignment="Left" Margin="253,302,0,0" VerticalAlignment="Top" Width="76" Click="clearButton_Click" Background="#FFEE3939"/>
         </Grid>
 
     </Grid>

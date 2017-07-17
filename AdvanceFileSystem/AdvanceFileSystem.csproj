@@ -113,6 +113,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="EmptyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Emp\CitizenList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Emp\Addresses.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -121,7 +129,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Emp\Citizens.xaml">
+    <Page Include="Emp\AddCitizen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -184,6 +192,12 @@
     <Compile Include="classes\RequestLog.cs" />
     <Compile Include="classes\User.cs" />
     <Compile Include="Connection.cs" />
+    <Compile Include="EmptyWindow.xaml.cs">
+      <DependentUpon>EmptyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Emp\CitizenList.xaml.cs">
+      <DependentUpon>CitizenList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Emp\Addresses.xaml.cs">
       <DependentUpon>Addresses.xaml</DependentUpon>
     </Compile>
@@ -193,8 +207,8 @@
     <Compile Include="EmpMenu.xaml.cs">
       <DependentUpon>EmpMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Emp\Citizens.xaml.cs">
-      <DependentUpon>Citizens.xaml</DependentUpon>
+    <Compile Include="Emp\AddCitizen.xaml.cs">
+      <DependentUpon>AddCitizen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Emp\Files\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>

@@ -175,10 +175,8 @@ D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Files\Ad
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Files\List.baml
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Citizens.g.cs
 D:\Graduation Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Citizens.baml
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Citizens.g.cs
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Addresses.g.cs
 E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Addresses.baml
-E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\Citizens.baml
 D:\Graduation_Project\AdvanceFileSystem\AdvanceFileSystem\bin\Debug\AdvanceFileSystem.exe.config
 D:\Graduation_Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.exe
 D:\Graduation_Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.pdb
@@ -233,3 +231,9 @@ D:\Graduation_Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\MainWindow.b
 D:\Graduation_Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.g.resources
 D:\Graduation_Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.Properties.Resources.resources
 D:\Graduation_Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\AdvanceFileSystem.csproj.GenerateResource.Cache
+E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\AddCitizen.g.cs
+E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\AddCitizen.baml
+E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\CitizenList.g.cs
+E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\CitizenList.baml
+E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\EmptyWindow.g.cs
+E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\EmptyWindow.baml

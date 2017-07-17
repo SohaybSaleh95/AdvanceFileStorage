@@ -10,8 +10,8 @@
     <Grid Margin="10,10,10,10" Background="#FFE3F7F3">
         <Label x:Name="useNameLabel" Content="UserName" HorizontalAlignment="Left" Margin="98,126,0,0" VerticalAlignment="Top" Width="86" Foreground="#FF0E0901" Background="{x:Null}" BorderBrush="Black"/>
         <Label x:Name="passwordLabel" Content="Password" HorizontalAlignment="Left" Margin="98,223,0,0" VerticalAlignment="Top" Width="86" Foreground="#FF0E0901"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="223,223,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.48,0.538" Width="120" TabIndex="1"/>
-        <TextBox x:Name="userNameBox" HorizontalAlignment="Left" Height="23" Margin="223,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TabIndex="0"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="223,223,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.48,0.538" Width="120" TabIndex="1" Password="123456"/>
+        <TextBox x:Name="userNameBox" HorizontalAlignment="Left" Height="23" Margin="223,126,0,0" TextWrapping="Wrap" Text="sohaybsaleh" VerticalAlignment="Top" Width="120" TabIndex="0"/>
         <Button x:Name="SignIn" Content="Login" HorizontalAlignment="Left" Margin="173,337,0,0" VerticalAlignment="Top" Width="75" Click="button_Click_1" TabIndex="2"/>
 
     </Grid>

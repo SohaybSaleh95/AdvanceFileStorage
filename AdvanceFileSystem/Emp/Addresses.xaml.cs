@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
-using AdvanceFileSystem.classes;
+using AdvanceFileSystem.Models;
 
 namespace AdvanceFileSystem.Emp
 {
@@ -22,43 +22,53 @@ namespace AdvanceFileSystem.Emp
     /// </summary>
     public partial class Addresses : UserControl
     {
+        List<Address> addresses;
         public Addresses()
         {
             InitializeComponent();
-
-            address();
+            FillAddresses();
         }
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
             string address = addressBox.Text;
-
-           // MySqlConnection conn = Connection.Connect();
-            //mySqlCommand cmd = conn.CreateCommand();
-         
-            //cmd.ExecuteNonQuery();
-            Connection.ExecuteNonQuery("INSERT INTO address (address) VALUES('" + address + "');");
-            this.address();
+            short id = (short)Connection.InsertAddress(address);
             addressBox.Clear();
+            FillAddresses();
         }
 
-        private void address ()
+        private void FillAddresses ()
         {
-            addresstable.Items.Clear();
-            MySqlConnection conn = Connection.Connect();
-            MySqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "select * FROM address";
-            MySqlDataReader Reader = cmd.ExecuteReader();
-            while (Reader.Read())
+            addresses = Connection.GetAddresses();
+            addresstable.ItemsSource = addresses;
+        }
+
+        private void addresstable_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Address address = (Address)addresstable.SelectedItem;
+            if(address != null)
             {
-                Address add = new Address();
-                add.Id = Reader.GetInt32("id");
-                add.Name = Reader.GetString("address");
-
-                addresstable.Items.Add(add);
-
+                addButton.Visibility = Visibility.Hidden;
+                saveButton.Visibility = Visibility.Visible;
+                addressBox.Text = address.Name;
             }
-            Reader.Close();
+        }
+
+        private void clearButton_Click(object sender, RoutedEventArgs e)
+        {
+            addresstable.SelectedIndex = -1;
+            addButton.Visibility = Visibility.Visible;
+            saveButton.Visibility = Visibility.Hidden;
+            addressBox.Text = "";
+        }
+
+        private void saveButton_Click(object sender, RoutedEventArgs e)
+        {
+            Address add = (Address)addresstable.SelectedItem;
+            add.Name = addressBox.Text;
+            Connection.UpdateAddress(add);
+            addressBox.Clear();
+            FillAddresses();
         }
     }
 }

@@ -24,6 +24,10 @@
             <Label x:Name="empJobLabel" Content="C# Developer" Margin="0,151,0,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Center"/>
             <StackPanel Height="461" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Top">
                 <Label x:Name="citizensButton" Content="Citizens" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" MouseLeftButtonUp="citizensButton_MouseLeftButtonUp" Cursor="Hand"/>
+                <Grid Height="0" x:Name="citizensMenuGrid">
+                    <Label x:Name="citizensAddButton" Content="Add" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" MouseLeftButtonUp="citizensAddButton_MouseLeftButtonUp" Cursor="Hand"/>
+                    <Label x:Name="citizensListButton" Content="List" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" MouseLeftButtonUp="citizensListButton_MouseLeftButtonUp" Cursor="Hand" Margin="0,35,0,0"/>
+                </Grid>
                 <Label x:Name="addressesButton" Content="Addresses" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" MouseLeftButtonUp="addressesButton_MouseLeftButtonUp" Cursor="Hand"/>
                 <Label x:Name="filesButton" Content="Files" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand"/>
                 <Label x:Name="categoriesButton" Content="Categories" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand"/>
