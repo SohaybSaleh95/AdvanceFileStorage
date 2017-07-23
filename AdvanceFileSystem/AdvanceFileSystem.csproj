@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>gavel_rea_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MahApps.Metro, Version=1.5.0.23, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.dll</HintPath>
@@ -45,6 +48,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -74,42 +78,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AdminMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Admin\AddEmployee.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Admin\ApproveFiles.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Admin\CategoriesMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Admin\EmployeesMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Admin\EmplyeesList.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Admin\FilesMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Admin\LoginLog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Admin\LogMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Admin\RequestLog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,33 +122,6 @@
     </Compile>
     <Compile Include="AdminMenu.xaml.cs">
       <DependentUpon>AdminMenu.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\AddEmployee.xaml.cs">
-      <DependentUpon>AddEmployee.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\ApproveFiles.xaml.cs">
-      <DependentUpon>ApproveFiles.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\CategoriesMenu.xaml.cs">
-      <DependentUpon>CategoriesMenu.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\EmployeesMenu.xaml.cs">
-      <DependentUpon>EmployeesMenu.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\EmplyeesList.xaml.cs">
-      <DependentUpon>EmplyeesList.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\FilesMenu.xaml.cs">
-      <DependentUpon>FilesMenu.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\LoginLog.xaml.cs">
-      <DependentUpon>LoginLog.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\LogMenu.xaml.cs">
-      <DependentUpon>LogMenu.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\RequestLog.xaml.cs">
-      <DependentUpon>RequestLog.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -228,6 +169,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MenuAnimation.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Citizen.cs" />
@@ -290,7 +232,15 @@
   <ItemGroup>
     <Resource Include="images\user.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="icons\gavel_rea_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="gavel_rea_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

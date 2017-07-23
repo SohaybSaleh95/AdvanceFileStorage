@@ -28,9 +28,17 @@
                     <Label x:Name="citizensAddButton" Content="Add" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" MouseLeftButtonUp="citizensAddButton_MouseLeftButtonUp" Cursor="Hand"/>
                     <Label x:Name="citizensListButton" Content="List" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" MouseLeftButtonUp="citizensListButton_MouseLeftButtonUp" Cursor="Hand" Margin="0,35,0,0"/>
                 </Grid>
+                <GridSplitter x:Name="citizensSplitter" HorizontalAlignment="Stretch" Height="5" Background="White"/>
                 <Label x:Name="addressesButton" Content="Addresses" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" MouseLeftButtonUp="addressesButton_MouseLeftButtonUp" Cursor="Hand"/>
-                <Label x:Name="filesButton" Content="Files" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand"/>
+                <GridSplitter x:Name="addressesSplitter" HorizontalAlignment="Stretch" Height="5" Background="White"/>
+                <Label x:Name="filesButton" Content="Files" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand"  MouseLeftButtonUp="filesButton_MouseLeftButtonUp"/>
+                <Grid Height="0" x:Name="filesMenuGrid">
+                    <Label x:Name="filesAddButton" Content="Add" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" MouseLeftButtonUp="filesAddButton_MouseLeftButtonUp" Cursor="Hand"/>
+                    <Label x:Name="filesListButton" Content="List" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" MouseLeftButtonUp="filesListButton_MouseLeftButtonUp" Cursor="Hand" Margin="0,35,0,0"/>
+                </Grid>
+                <GridSplitter x:Name="filessSplitter" HorizontalAlignment="Stretch" Height="5" Background="White"/>
                 <Label x:Name="categoriesButton" Content="Categories" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand"/>
+                
             </StackPanel>
         </Grid>
         <Grid x:Name="body" Margin="120,0,0,0" Background="#FFE3F7F3"/>

@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AdvanceFileSystem.Models;
 
 namespace AdvanceFileSystem
 {
@@ -22,21 +23,26 @@ namespace AdvanceFileSystem
     /// </summary>
     public partial class EmpMenu : MetroWindow
     {
-        private DoubleAnimation SideBarAnimation ,
-            ShowBodyAnimation ,
-            HideBodyAnimation,
-            FilesAnimation,
+        private DoubleAnimation SideBarAnimation,
+            ShowBodyAnimation,
+            HideBodyAnimation;
+
+        private MenuAnimation FilesAnimation,
             CitizensAnimation,
             AddressesAnimation,
             CategoriesAnimation;
+
+        private User User;
 
         private Label Active { get; set; }
 
         private UserControl BodyContent;
 
-        public EmpMenu()
+        public EmpMenu(User user)
         {
             InitializeComponent();
+            User = user;
+            empNameLabel.Content = User.UserName;
             SideBarAnimation = new DoubleAnimation();
 
 
@@ -55,33 +61,19 @@ namespace AdvanceFileSystem
             HideBodyAnimation.To = 0;
             HideBodyAnimation.Duration = new Duration(TimeSpan.FromMilliseconds(500));
 
-            FilesAnimation = CreateMenuAnimation();
-            CitizensAnimation = CreateMenuAnimation();
-            AddressesAnimation = CreateMenuAnimation();
-            CategoriesAnimation = CreateMenuAnimation();
+            FilesAnimation = new MenuAnimation();
+            CitizensAnimation = new MenuAnimation();
+            AddressesAnimation = new MenuAnimation();
+            CategoriesAnimation = new MenuAnimation();
+
+            
         }
 
-        private async void citizensButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void citizensButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             citizensMenuGrid.BeginAnimation(Grid.HeightProperty, CitizensAnimation);
-            ReverseValues(CitizensAnimation);
+            CitizensAnimation.ReverseAnimation();
             ActiveLabel(sender);
-            /*
-            if (BodyContent != null)
-            {
-                HideBody();
-                await Task.Delay(250);
-            }
-            body.Children.Clear();
-            BodyContent = new Emp.AddCitizen();
-            BodyContent.Margin = new Thickness(0);
-            BodyContent.Width = body.Width;
-            BodyContent.Height = body.Height;
-            BodyContent.Opacity = 0;
-            body.Children.Add(BodyContent);
-            ShowBody();
-
-            */
         }
 
         private async void addressesButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -137,21 +129,21 @@ namespace AdvanceFileSystem
             ShowBody();
         }
 
-
-        /**
-         * Create Menu Animation
-         * هنا قيم الانميشن نفسهم فبدل ما نكررهم اكثر من مرة 
-         * خليناه بفنكشن واستدعيناه لكل قائمة
-         *
-         **/
-
-        private DoubleAnimation CreateMenuAnimation()
+        private void filesAddButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            DoubleAnimation da = new DoubleAnimation();
-            da.From = 0;
-            da.To = 70;
-            da.Duration = new Duration(TimeSpan.FromMilliseconds(250));
-            return da;
+
+        }
+
+        private void filesListButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void filesButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            filesMenuGrid.BeginAnimation(Grid.HeightProperty, FilesAnimation);
+            FilesAnimation.ReverseAnimation();
+            ActiveLabel(sender);
         }
 
         private void ShowBody()
@@ -169,18 +161,6 @@ namespace AdvanceFileSystem
             side_bar.BeginAnimation(Grid.WidthProperty, SideBarAnimation);
         }
 
-        /*
-         * Reverse Animation
-         * بيعكس قيم الانميشن
-         * 
-         */
-        private void ReverseValues(DoubleAnimation animation)
-        {
-            double? temp = animation.From;
-            animation.From = animation.To;
-            animation.To = temp;
-        }
-
         private void ActiveLabel(object label)
         {
 
@@ -196,5 +176,6 @@ namespace AdvanceFileSystem
             Active.Background = new SolidColorBrush(Color.FromRgb(227,247,243));
             
         }
+
     }
 }

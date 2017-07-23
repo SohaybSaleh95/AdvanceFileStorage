@@ -3,44 +3,54 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:AdvanceFileSystem"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="AdminMenu" Height="550" Width="550" Background="#FF2C3E50">
+        GlowBrush="Black"
+        Title="Admin Menu" Height="688.65" Width="936.04" Background="#FF06575B" WindowTitleBrush="#FFF90000">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="64*"/>
-        </Grid.ColumnDefinitions>
-        <Grid x:Name="SideBar" HorizontalAlignment="Left" Width="26" Background="#FF2980B9" MouseEnter="SideBar_MouseEnter" MouseLeave="SideBar_MouseLeave">
-            <Image x:Name="EmpImage" HorizontalAlignment="Left" Height="26" Margin="0,10,0,0" VerticalAlignment="Top" Width="26">
-                <Image.Source>
-                    <BitmapImage UriSource="/images/Contacts-64.png" />
-                </Image.Source>
-            </Image>
-            <Label x:Name="EmpName" Content="EmpName" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="124" Foreground="#FFECF0F1"/>
-            <Grid HorizontalAlignment="Left" Height="226" Margin="0,75,0,0" VerticalAlignment="Top" Width="150">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="44"/>
-                    <RowDefinition Height="44"/>
-                    <RowDefinition Height="44"/>
-                    <RowDefinition Height="44"/>
-                </Grid.RowDefinitions>
-                <Grid x:Name="Files" HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="150" Grid.Row="1" Margin="0,1,0,0" MouseEnter="SideBar_Button_MouseEnter" MouseLeave="SideBar_Button_MouseLeave" Cursor="Hand" MouseLeftButtonUp="Files_MouseLeftButtonUp">
-                    <Image x:Name="image_Copy2" HorizontalAlignment="Left" Height="24" Margin="0,10,0,0" VerticalAlignment="Top" Width="24" Source="/images/File-50.png"/>
-                    <Label x:Name="label_Copy" Content="Files" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="126" Foreground="#FFECF0F1" Height="24"/>
+        <Grid x:Name="side_bar" HorizontalAlignment="Left" Width="120" Background="#FF07A28D" RenderTransformOrigin="0.459,0.514" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="197"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Image x:Name="image1" Height="30" Margin="0,10,10,0" VerticalAlignment="Top" OpacityMask="White" Stretch="Fill" Source="images/Menu-64.png" HorizontalAlignment="Right" Width="30"/>
+            <Ellipse HorizontalAlignment="Left" Height="70" Margin="25,45,0,0" Stroke="Black" VerticalAlignment="Top" Width="70">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="images/user.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Label x:Name="adminNameLabel" Content="Employee" Margin="0,120,0,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Center"/>
+            <Label x:Name="adminJobLabel" Content="C# Developer" Margin="0,151,0,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Center"/>
+            <StackPanel Height="461" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Top">
+                
+                <!-- Departments -->
+                <Label x:Name="departmentsButton" Content="Departments" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand" MouseLeftButtonUp="departmentsButton_MouseLeftButtonUp"/>
+                <Grid Height="0" x:Name="departmentsMenuGrid" Background="#FF0CCFB4">
+                    <Label x:Name="departmentsAddButton" Content="Add" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand"/>
+                    <Label x:Name="departmentsListButton" Content="List" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand" Margin="0,35,0,0"/>
                 </Grid>
-                <Grid x:Name="Log" HorizontalAlignment="Left" Height="44" Margin="0,1,0,0" VerticalAlignment="Top" Width="150" Grid.Row="2" MouseEnter="SideBar_Button_MouseEnter" MouseLeave="SideBar_Button_MouseLeave" Cursor="Hand" MouseLeftButtonUp="Log_MouseLeftButtonUp">
-                    <Image x:Name="log_image" HorizontalAlignment="Left" Height="24" Margin="0,10,0,0" VerticalAlignment="Top" Width="24" Source="/images/Clock-64.png"/>
-                    <Label x:Name="label_Copy1" Content="Log" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="126" Foreground="#FFECF0F1" Height="24"/>
+                <GridSplitter x:Name="departmentsSplitter" HorizontalAlignment="Stretch" Height="5" Background="White"/>
+
+                <!-- Users -->
+                <Label x:Name="usersButton" Content="Users" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand" MouseLeftButtonUp="departmentsButton_MouseLeftButtonUp"/>
+                <Grid Height="0" x:Name="usersMenuGrid" Background="#FF0CCFB4">
+                    <Label x:Name="usersAddButton" Content="Add" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand"/>
+                    <Label x:Name="usersListButton" Content="List" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand" Margin="0,35,0,0"/>
                 </Grid>
-                <Grid x:Name="Employees" HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="150" MouseEnter="SideBar_Button_MouseEnter" MouseLeave="SideBar_Button_MouseLeave" Cursor="Hand" MouseLeftButtonUp="Employees_MouseLeftButtonUp">
-                    <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="24" Margin="0,10,0,0" VerticalAlignment="Top" Width="24" Source="images/Employee.png"/>
-                    <Label x:Name="label_Copy2" Content="Employees" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="126" Foreground="#FFECF0F1" Height="24"/>
+                <GridSplitter x:Name="usersSplitter" HorizontalAlignment="Stretch" Height="5" Background="White"/>
+
+                <!-- Files -->
+                <Label x:Name="filesButton" Content="Files" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand" MouseLeftButtonUp="departmentsButton_MouseLeftButtonUp"/>
+                <Grid Height="0" x:Name="filesMenuGrid" Background="#FF0CCFB4">
+                    <Label x:Name="filesAddButton" Content="Approve" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand"/>
+                    <Label x:Name="filesListButton" Content="Permissions" VerticalAlignment="Top" Height="35" FontSize="16" Padding="15,5,5,5" Cursor="Hand" Margin="0,35,0,0"/>
                 </Grid>
-            </Grid>
+                <GridSplitter x:Name="filesSplitter" HorizontalAlignment="Stretch" Height="5" Background="White"/>
+                
+            </StackPanel>
         </Grid>
-        <Grid x:Name="Body" Grid.Column="1" Margin="10"/>
+        <Grid x:Name="body" Margin="120,0,0,0" Background="#FFE3F7F3"/>
 
     </Grid>
 </Controls:MetroWindow>

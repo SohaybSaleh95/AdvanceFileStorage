@@ -57,16 +57,25 @@ namespace AdvanceFileSystem
                     {
                         Reader.Read();
 
-                        if (Reader["admin"].ToString() == "1")
+                        User user = new User()
                         {
-                            Reader.Close();
-                            new AdminMenu().Show();
+                            Id = Reader.GetInt32("id"),
+                            UserName = Reader.GetString("username"),
+                            Email = Reader.GetString("email"),
+                            Admin = Reader.GetBoolean("admin"),
+                            Permission = Reader.GetByte("permission"),
+                            CardId = Reader.GetInt32("card_id"),
+                            BirthDate = Reader.GetDateTime("birthdate")
+                        };
 
+                        Reader.Close();
+                        if (user.Admin)
+                        {
+                            new AdminMenu().ShowDialog();
                         }
                         else
                         {
-                            Reader.Close();
-                            new EmpMenu().Show();
+                            new EmpMenu(user).ShowDialog();
                         }
                     }
                     else
@@ -82,6 +91,14 @@ namespace AdvanceFileSystem
                 this.ShowMessageAsync("Error", ex.Message);
             }
 
+        }
+
+        private void userNameBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                button_Click_1(sender, e);
+            }
         }
     }
 }
