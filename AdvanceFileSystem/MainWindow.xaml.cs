@@ -26,6 +26,8 @@ namespace AdvanceFileSystem
     /// 
     public partial class MainWindow : MetroWindow
     {
+      private  DatabaseContext db = new DatabaseContext();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -39,21 +41,29 @@ namespace AdvanceFileSystem
                 string Password = passwordBox.Password;
                 if (Extra.StringTools.AnyEmpty(UserName, Password))
                 {
-                    this.ShowMessageAsync("Error", "Username or Password are Empty");
+                    this.ShowMessageAsync("Error", Extra.Errors.FieldEmpty);
                 }
                 else
                 {
                     //MySqlConnection conn = Connection.Connect();
                     //MySqlCommand cmd = conn.CreateCommand();
                     Password = Extra.Encrypt.MD5(Password);
-                    string query = ("select * from users where username = '{0}' and password ='{1}' "); //string format
-                                                                                                        //cmd.CommandText = string.Format(query, UserName, Password);
-
+                    //string query = ("select * from users where username = '{0}' and password ='{1}' "); //string format
+                    //cmd.CommandText = string.Format(query, UserName, Password);
                     //MySqlDataReader Reader = cmd.ExecuteReader();
 
-                    MySqlDataReader Reader = Connection.ExecuteReader(string.Format(query, UserName, Password));
+                    User user = db.Users.Where(u => u.UserName == UserName && u.Password == Password).FirstOrDefault() ;
+                   if(user != null)
+                    {
+                        new EmpMenu(user).Show();
+                    }
+                   else
+                    {
+                        this.ShowMessageAsync("Error", Extra.Errors.Invalid);
+                    }
+                    //MySqlDataReader Reader = Connection.ExecuteReader(string.Format(query, UserName, Password));
 
-                    if (Reader.HasRows)
+                    /*if (Reader.HasRows)
                     {
                         Reader.Read();
 
@@ -82,7 +92,7 @@ namespace AdvanceFileSystem
                     {
                         Reader.Close();
                         this.ShowMessageAsync("Invalid information", Extra.Errors.Invalid);
-                    }
+                    }*/
                 }
 
             }

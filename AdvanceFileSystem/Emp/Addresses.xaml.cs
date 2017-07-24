@@ -22,7 +22,8 @@ namespace AdvanceFileSystem.Emp
     /// </summary>
     public partial class Addresses : UserControl
     {
-        List<Address> addresses;
+        //List<Address> addresses;
+        private DatabaseContext db = new DatabaseContext();
         public Addresses()
         {
             InitializeComponent();
@@ -32,15 +33,30 @@ namespace AdvanceFileSystem.Emp
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
             string address = addressBox.Text;
-            short id = (short)Connection.InsertAddress(address);
-            addressBox.Clear();
-            FillAddresses();
+            Address adress = new Address();
+            adress.Name = address;
+            if(adress.IsValid)
+            {
+                db.Addersses.Add(adress);
+                db.SaveChanges();
+                addressBox.Clear();
+                FillAddresses();
+            }
+            else
+            {
+                MessageBox.Show(adress.Error);
+            }
+           // short id = (short)Connection.InsertAddress(address);
+            
+            //FillAddresses();
         }
 
         private void FillAddresses ()
         {
-            addresses = Connection.GetAddresses();
-            addresstable.ItemsSource = addresses;
+            //addresses = Connection.GetAddresses();
+            //addresstable.ItemsSource = addresses;
+
+            addresstable.ItemsSource = db.Addersses.ToList();
         }
 
         private void addresstable_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -56,17 +72,28 @@ namespace AdvanceFileSystem.Emp
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
         {
+            //يقوم بحذف الاختيار من الجدول
             addresstable.SelectedIndex = -1;
+
+            //اظهار زر الاضافة
             addButton.Visibility = Visibility.Visible;
+
+            //اخفاء زر الحفظ
             saveButton.Visibility = Visibility.Hidden;
-            addressBox.Text = "";
+
+            //يمسح ما في داخل صندوق الادرس
+            addressBox.Clear();
         }
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
-            Address add = (Address)addresstable.SelectedItem;
-            add.Name = addressBox.Text;
-            Connection.UpdateAddress(add);
+            Address address = (Address)addresstable.SelectedItem;
+            address.Name = addressBox.Text;
+
+            //Connection.UpdateAddress(add);
+
+            db.SaveChanges();
+
             addressBox.Clear();
             FillAddresses();
         }
