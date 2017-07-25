@@ -135,11 +135,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="classes\Address.cs" />
-    <Compile Include="classes\Employee.cs" />
-    <Compile Include="classes\LoginLog.cs" />
-    <Compile Include="classes\RequestLog.cs" />
-    <Compile Include="classes\User.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="EmptyWindow.xaml.cs">
@@ -151,9 +146,6 @@
     <Compile Include="Emp\Addresses.xaml.cs">
       <DependentUpon>Addresses.xaml</DependentUpon>
     </Compile>
-    <Compile Include="classes\Category.cs" />
-    <Compile Include="classes\Citizen.cs" />
-    <Compile Include="classes\File.cs" />
     <Compile Include="EmpMenu.xaml.cs">
       <DependentUpon>EmpMenu.xaml</DependentUpon>
     </Compile>

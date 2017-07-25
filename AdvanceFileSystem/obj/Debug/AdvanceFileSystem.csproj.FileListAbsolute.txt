@@ -209,3 +209,7 @@ D:\Graduation_Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\AddCitiz
 D:\Graduation_Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\EmptyWindow.baml
 D:\Graduation_Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\CitizenList.baml
 D:\Graduation_Project\AdvanceFileSystem\AdvanceFileSystem\obj\Debug\Emp\AddCitizen.baml
+E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\bin\Debug\EntityFramework.dll
+E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\bin\Debug\EntityFramework.SqlServer.dll
+E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\bin\Debug\EntityFramework.xml
+E:\GraduationProject\AdvanceFileSystem\AdvanceFileSystem\bin\Debug\EntityFramework.SqlServer.xml

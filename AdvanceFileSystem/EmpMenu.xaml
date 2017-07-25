@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:AdvanceFileSystem"
         mc:Ignorable="d"
         GlowBrush="Black"
-        Title="Employee Menu" Height="688.65" Width="936.04" Background="#FF06575B" WindowTitleBrush="#FFF90000">
+        Title="Employee Menu" Height="688.65" Width="936.04" Background="#FF06575B" WindowTitleBrush="#FFF90000" WindowState="Maximized">
     <Grid>
         <Grid x:Name="side_bar" HorizontalAlignment="Left" Width="120" Background="#FF07A28D" RenderTransformOrigin="0.459,0.514" Grid.RowSpan="2">
             <Grid.RowDefinitions>
